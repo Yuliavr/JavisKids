@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+  <html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title>JavisKids</title>
+</head>
+
+<body>
+  <!--Barra Navegación-->
+  <div class="barra barra-nav">
+    <!-- Logo a la izquierda -->
+    <a href="#" class="logo"><img class="imlogo" src="img\logo3.png" alt="Logo"></a>
+    <!-- Lista de iconos a la derecha -->
+    <ul class="icons">
+      <li><a class="run-button" href="#"><img class="imico" src="img\Icons\Iconask.png" alt="Icono 1"></a></li>
+      <li><a class="run-button" href="#"><img class="imico" src="img/play2.png" alt="Icono 2"></a></li>
+      <li><a class="run-button" href="#"><img class="imico" src="img/cmd2.png" alt="Icono 3"></a></li>
+      <li><a class="run-button" href="#"><img class="imico" src="img/out2.png" alt="Icono 4"></a></li>
+    </ul>
+    <!--Buscador -->
+    <form id="SearchDiv" action="SearchController" method="post">
+      <input id="buscainput" type="text" name="searchQuery" required />
+    </form>
+    <!-- Barra peq en Barra lateral -->
+  </div>
+
+  <div class="ara-lat"></div>
+  <div class="bar">
+    <!-- Icons ask -->
+  <section>
+    <ul class="iconask">
+      <li><a class="run-button" href="#"><img class="iconask" src="img\Icons\cmdedi.png" alt="Icono 1"></a></li>
+      <li><a class="run-button" href="#"><img class="iconask" src="img\Icons\ai.png" alt="Icono 1"></a></li>
+      <li><a class="run-button" href="#"><img class="iconask" src="img\Icons\exten.png" alt="Icono 1"></a></li>
+      <li><a class="run-button" href="#"><img class="iconask" src="img\Icons\lib.png" alt="Icono 1"></a></li>
+      <li><a class="run-button" href="#"><img class="iconask" src="img\Icons\cam.png" alt="Icono 1"></a></li>
+      <li><a class="run-button" href="#"><img class="iconask" src="img\Icons\trans.png" alt="Icono 1"></a></li>
+      <li><a class="run-button" href="#"><img class="iconask" src="img\Icons\msjs.png" alt="Icono 1"></a></li>
+      <li><a class="run-button" href="#"><img class="iconask" src="img\Icons\nube.png" alt="Icono 1"></a></li>
+      <li><a class="run-button" href="#"><img class="iconask" src="img\Icons\users.png" alt="Icono 1"></a></li>
+      
+  </section>
+    <ul>
+      <li><img class="imgba" src="img/Icons/actualizacion2.png" /></li>
+      <li><img class="imgba" src="img/Icons/subir-carpeta2.png" /></li>
+      <li><img class="imgba" src="img/Icons/carpeta-abierta2.png" /></li>
+      <li><img class="imgba" src="img/Icons/new2.png" /></li>
+    </ul>
+  </div>
+  
+  <!--Barra Lateral -->
+  <div class="barra barra-lateral">
+    <!-- Lista de iconos a la izquierda -->
+    <ul class="iblateral">
+      <li class="list-ico">
+        <div class="list-item">
+          <a  class="text" href="#"><img class="imlateral" src="img/arqui3.png">Architecture<img class="list_buttom" src="img/flecha2.png" alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" /><button class="loadPage" onclick="loadPage('D:\yulia\paginas\pythonkids\paginas\texts.html');" style="border:none; background-color: transparent; color: white;">Hadware</button></li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/ram3.png">Memorys<img class="list_buttom" src="img/flecha2.png" alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Variables<iframe src="D:\yulia\paginas\pythonkids\paginas\texts.html" id='frame' width='400' height='400' frameborder='10'></iframe></li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Constants</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/var3.png">Variables <img class="list_buttom" src="img/flecha2.png" alt="" /></a>
+        </div>
+
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Variables<iframe src="D:\yulia\paginas\pythonkids\paginas\texts.html" frameborder="10"></iframe></li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Constants</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/func3.png">Functions<img class="list_buttom" src="img/flecha2.png" alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/bin3.png">Binary<img class="list_buttom" src="img/flecha2.png" alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/flujo3.png">Algorithms<img class="list_buttom" src="img/flecha2.png" alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/error3.png">Excepctions<img class="list_buttom"
+              src="img/flecha2.png" alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/dato3.png">Data<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/opera3.png">Operators<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/loop3.png">Loops<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/recu3.png">Recursion<img class="list_buttom"
+              src="img/flecha2.png" alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/buil3.png">Built-In<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/sinta3.png">Syntax<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/class3.png">Classes<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/poo3.png">OOP<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/faz3.png">Interface<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/base3.png">DataBase<img class="list_buttom"
+              src="img/flecha2.png" alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/fiche3.png">Files<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/modu3.png">Modules<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/frame3.png">Frameworks<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/lib3.png">Librarys<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/servi3.png">Servers<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/web3.png">Browsers<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/os3.png">Platforms<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/test3.png">Testing<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/conte3.png">Containers<img class="list_buttom"
+              src="img/flecha2.png" alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text" href="#"><img class="imlateral" src="img/rna3.png">Networks RNA<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+
+      <li class="list-ico">
+        <div class="list-item">
+          <a class="text"  href="#"><img class="imlateral" src="img/ino3.png">Arduino<img class="list_buttom" src="img/flecha2.png"
+              alt="" /></a>
+        </div>
+        <ul class="list_inside">
+          <li class="sublista"><img id="sub" src="img/had3.png" />Hadware</li>
+          <li class="sublista"><img id="sub" src="img/sof3.png" />Software</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Ventanas -->
+  <div class="container">
+    <!-- División para escribir código -->
+    <div class="code">
+      <h3 class="title-1">Code:</h3>
+      <img class="codec" src="img\Icons\codec.png" alt="#">
+      <code></code>
+      <textarea id="codes-input"></textarea>
+    </div>
+    <!-- División para ver el resultado -->
+    <div class="result">
+      <h2 class="title-resu">Result:</h2>
+      <a class="equis" href="#">X</a>
+      <div id="result-output">
+      </div>
+    </div>
+    
+    <!-- División para ver el taller -->
+    <div class="task">
+      <div class="taskdown"></div>
+      <h2 class="title-ta">Tasks:</h2>
+      <img class="codet" src="img\Icons\codet.png" alt="#" />
+      
+      <!-- <iframe src="D:\yulia\paginas\pythonkids\paginas\texts.html" frameborder="10"></iframe> -->
+    </div>
+    
+    <!--Division de View -->
+    <div class="view">
+      <div class="taskdown"></div>
+      <h2 class="title-ta">View:</h2>
+      <img class="codev" src="img\Icons\codet.png" alt="#" />
+      <video class="viewv" src="" height="" width="" preload="none" autoplay="autoplay"></video>
+      <div class="viewt">
+        <h1 class="viewtext">Text here</h1>
+      </div>
+    </div>
+    
+  </div>
+  <!--Barra inferior-->
+  <div class="barra-infe">
+    <div id="infe-peq">
+      <a class="hc" href="#"><img class="icoin2" src="img/Icons/noti.png" alt="" /></a>
+      <!-- <a class="hc" href="#"><img class="icoin1" src="img/Icons/user.png" alt="" /></a>
+      <a class="hc" href="#"><img class="icoin3" src="img/Icons/langua.png" alt="" /></a> -->
+      <a class="hc" href="#"><img class="icoin1" src="img/Icons/fleab.png" alt="" /></a>
+      <a class="hc2" href="#"><img class="icoin4" src="img\Icons\sintax.png" alt="" /></a>
+      <h4 class="letra-infe">Js</h4>
+      <!-- <h4 class="letra-infe" >UTF-8</h4>
+      <h4 class="letra-infe" >Espacio:</h4>
+      <h4 class="letra-infe" >Ln</h4> -->
+      <h5 class="letrainfe2">0</h5>
+      
+    </div>
+  </div>
+
+</body>
+
+</html>
+
