@@ -100,7 +100,7 @@ li .imico {
 .ara-lat{
   background-color: #22374a;
   width: 50px;
-  height: 89.8%;
+  height: 87.6%;
   position: fixed;
   top: 100px;
   /* border: 1px solid #fff; */
@@ -145,7 +145,7 @@ li .iconask {
   /* background-color: #151515;  */
   background-color: #345362; 
   width: 150px;
-  height: 1%;
+  height: 1.2%;
   position: fixed;
   top: 100px;
   left: 50px;
@@ -174,22 +174,26 @@ li .imgba {
 .barra-lateral {
   list-style-type: none;
   width: 150px;
-  height: 71.1%;
+  height: 68.9%;
   position: fixed;
   top: 120px;
   left: 50px;
-  overflow-y: auto; /* barra de deslizamiento vertical */
-  overflow-x: hidden; /* barra de deslizamiento horizontal */
   /*background-color: #2980B9;*/
   background-color: #041424;
   border: 1px solid #fff;
   z-index: 1000; 
   max-width: 1000px;
+  overflow-y: auto; /* barra de deslizamiento vertical */
+  overflow-x: hidden; /* barra de deslizamiento horizontal */
 
 }
 
 .text{
  color: #fff;
+}
+
+a.text{
+  width: 70%;
 }
 
 
@@ -370,7 +374,7 @@ p {
   top: 100px;
   left: 200px;
   width: 43%;
-  height: 72.3%;
+  height: 70.5%;
  /*  width: 49.7%;
   height: 66.5%; */
   font-family: monospace;
@@ -402,7 +406,7 @@ code:before {
   top: 150px;
   left: 230px;
   width: 38%;
-  height: 69%;
+  height: 66%;
   /* background-color: #031626;  */
   /* background-color: #64e4fc; */
   background-color: #fdfff3; /* color de fondo donde se escribe los codigos */
@@ -428,7 +432,7 @@ code:before {
   top: 100px;
   left: 63%;
   width: 36.7%;
-  height: 71.4%;
+  height: 70.4%;
   /*background-color: #0B4C5F;*/
   background-color: #041424;
   padding: 10px;
@@ -440,10 +444,10 @@ code:before {
 
 .codet{
   position: fixed;
-  top: 85px;
+  top: 108px;
   left: 93%;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   color: #000;
 }
 
@@ -472,7 +476,7 @@ iframe{
  border: 1px solid #fff;
 } */
 
-/*Título exercise*/
+/*Título task*/
 .title-ta {
  position: relative;
  z-index: auto;
@@ -506,12 +510,13 @@ iframe{
 
 }
 
+/* Flecha */
 .codev{
   position: fixed;
-  top: 46.3%;
+  top: 47.5%;
   left: 93%;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   color: #000;
 }
 .viewv{
@@ -519,23 +524,27 @@ iframe{
   top: 15px;
   left: 0px;
   width: 340px;
-  height: 300px;
+  height: 200px;
   /* background-color: #64e4fc; /* color html index */
   background-color: #000;
 }
 
 .viewt {
   position: reltive;
-  top: 25px;
+  top: 30px;
   left: 0%;
-  width: 99%;
-  height: 30%;
+  width: 100%;
+  height: 40%;
   /*background-color: #0B4C5F;*/
   background-color: #041424;
   overflow-y: auto;
   color: #000;
   border: 2px solid #fff;
 
+}
+
+h1.viewtext{
+  margin-top: 20px;
 }
 
 .viewtext{
@@ -571,12 +580,12 @@ border: 1px solid #fff;
 /* consola cmd mostrar resultado*/
 #result-output {
  position: fixed;
- top: 79.5%;
+ top: 80.1%;
  left: 50px;
 /*  width: calc(100% - 200px);
  height: calc(50% - 50px); */
  width: 100%;
- height: 12.4%;
+ height: 14%;
  /* background-image: url("\img\Imagen15.png"); /* imagen consola  */
 /*  background-repeat: repeat; */
  /* background-size: 400px 230px; */
@@ -613,7 +622,7 @@ border: 1px solid #fff;
 /* barra inferior */
 .barra-infe {
   position: fixed;
-  top: 92%;
+  top: 94%;
   left: 0px;
   width: 100%;
   height: 100px;
@@ -696,200 +705,25 @@ border: 1px solid #fff;
 } 
 
 /* tamano cel */
-@media screen and(max-width: 767px) {
+/* @media screen and(max-width: 425px) {
 
-}
+} */
 
 /* tamano tablet */
 @media screen and(min-width: 768px) and (max-width: 1023px) {
 
-  .barra-nav {
-    height: 60px; /* Reduced height for tablet */
-  }
-
-  #SearchDiv {
-    text-align: center;
-    margin: 10px; /* Adjusted margin */
-    padding: 8px; /* Adjusted padding */
-    font-size: 12px; /* Adjusted font size */
-  }
-  
-  #buscainput {
-    font-size: 24px; /* Reduced font size */
-    width: 40%; /* Adjusted width */
-    height: 25px; /* Adjusted height */
-  }
-
-  
-  .imlogo {
-    height: 40px; /* Reduced size */
-    width: 40px; /* Reduced size */
-  }
-
-  .ara-lat {
-    background-color: #22374a;
-    width: 40px; /* Reduced width */
-    height: 89.8%;
-    position: fixed;
-    top: 80px; /* Adjusted top position */
-  }
-  
-  .iconask {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    float: left;
-    margin: 5px;
-    text-decoration: none;
-    top: 10px;
-    left: -28px;
-  }
-  
-  .iconask a {
-    padding: 4px;
-    text-decoration: none;
-  }
-  
-  li .iconask {
-    height: 25px; /* Reduced size */
-    width: 25px; /* Reduced size */
-  }
-
-/*subbarra nav pequeña en la barra lateral*/
-  .bar {
-    
-    height: 50px;
-    position: fixed;
-    top: 80px; /* Adjusted top position */
-    left: 40px; /* Adjusted left position */
-
-  }
-  
-  li .imgba {
-    height: 12px; /* Reduced size */
-    width: 12px; /* Reduced size */
-    margin: -11px;
-    right: -10px;
-  }
-
-  .barra-lateral {
-    list-style-type: none;
-    width: 120px; /* Reduced width */
-    height: 71%;
-    position: fixed;
-    top: 100px; /* Adjusted top position */
-    left: 40px; /* Adjusted left position */
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: #041424;
-    border: 1px solid #fff;
-    z-index: 1000;
-  }
-  
-  .iblateral {
-    width: 120px; /* Reduced width */
-    float: left;
-    margin: 0;
-    padding: 0;
-    padding-left: 5px;
-  }
-  
-  .list-ico {
-    height: 80%;
-    width: 180px; /* Reduced width */
-    height: 40px;
-  }
-  
-  .list-item {
-    width: 180px; /* Reduced width */
-    height: 20px;
-  }
-  
-  li .imlateral {
-    height: 25px; /* Reduced size */
-    width: 25px; /* Reduced size */
-  }
-  .code {
-    position: fixed;
-    top: 80px; /* Adjusted top position */
-    left: 160px; /* Adjusted left position */
-    width: 50%; /* Adjusted width height: 70%; /* Adjusted height */
-    font-family: monospace;
-    font-size: 18px; /* Reduced font size */
-    background-color: #041424;
-    color: #fff;
-    border: 1px solid #fff;
-  }
-  
-  #codes-input {
-    position: fixed;
-    top: 150px; /* Adjusted top position */
-    left: 200px; /* Adjusted left position */
-    width: 35%; /* Adjusted width */
-    height: 65%; /* Adjusted height */
-    background-color: #fdfff3;
-    color: #000;
-    font-size: 24px; /* Reduced font size */
-    overflow-y: auto;
-    overflow-x: auto;
-  }
-
-  .result {
-    position: fixed;
-    top: 75%; /* Adjusted top position */
-    left: 40px; /* Adjusted left position */
-    width: 90%; /* Adjusted width */
-    height: 15%;
-    background-color: #345362;
-    border: 1px solid #fff;
-  }
-  
-  #result-output {
-    position: fixed;
-    top: 78%; /* Adjusted top position */
-    left: 40px; /* Adjusted left position */
-    width: 90%; /* Adjusted width */
-    height: 10%; /* Adjusted height */
-    background-color: #000;
-    margin: 2px;
-    padding: 8px;
-    color: #fff;
-    font-size: 24px; /* Reduced font size */
-  }
-
-  .barra-infe {
-    position: fixed;
-    top: 90%;
-    left: 0px;
-    width: 100%;
-    height: 80px; /* Adjusted height */
-    background-color: #22374a;
-  }
-  
-  .letra-infe {
-    color: #fff;
-    float: right;
-    padding: 6px 6px;
-    padding-top: 20px;
-    text-align: center;
-    font-family: monospace;
-    font-size: 24px; /* Reduced font size */
-  }
-  
-  .hc2 {
-    color: #fff;
-    float: left;
-    padding: 20px 20px;
-    padding-top: 22px;
-    text-align: center;
-    font-size: 24px; /* Reduced font size */
-  }
-
+  /* Establecer el estilo de la barra de navegación */
+div.barra.barra-nav {
+  height: 40px;
+}
+ 
 }
 /* tamano pc */
 @media screen and(min-width: 1024px) {
 
 }
+
+
+
 
 
