@@ -15,18 +15,136 @@ body {
   background-color: #000;
 }
 
+/* Estilos para móviles (max-width: 425px) */
+
+@media screen and (max-width: 426px) {
 /* Establecer el estilo de la barra de navegación */
-.barra-nav {
-  width: 100%;
-  height: 100px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* background-color: #1B1A18;*/
-  /* background-color: #0e131b; */
-  background-color: #22374a;
+  .barra-nav {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #22374a;
+  }
+  
+   /* Estilo del logo */
+   .logo {
+    float: left;
+    padding: 2px;
+  
+  }
+  
+  /* tamano del logo */
+  .imlogo {
+    height: 45px;
+    width: 45px;
+  }
 
+  /*Buscador*/
+  #SearchDiv {
+   text-align: center;
+   margin: 8px; 
+   padding: 2px;
+   right: 4px;
+  
+  }
+  /*input del buscador*/
+  #buscainput {
+    background-color: #fff; 
+    background-size: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    font-size: 20px;
+    width: 35%;  
+    height: 5%;
+  }
+  
+  /* Estilo iconos barra Navegación */
+  .icons {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    float: right;
+    margin: 3px;
+    text-decoration: none;
+  }
 
+<<<<<<< HEAD
+  /* Ajusta el tamaño de los iconos de la barra de navegacion */
+  li .imico {
+    height: 40px;
+    width: 40px;
+  }
+  
+  /* Estilo de los enlaces con iconos */
+  .icons a {
+    padding: 0px;
+    text-decoration: none;
+  
+  }
+   
+  /* Estilo de los iconos al pasar el mouse */
+  a.run-button:hover {
+    background-color: #1B1A18;
+    border-radius: 50%;
+  }
+  
+/* Barra larga antes de la barra de navegacion */
+  .ara-lat{
+    background-color: #22374a;
+    width: 40px;
+    height: 86.2%;
+    position: fixed;
+    top: 50px;
+    /* border: 1px solid #fff; */
+  }
+  
+  /* iconask  de la barra larga*/
+  .iconask {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; /* Cambia a vertical */
+    justify-content:space-between;
+    float: left;
+    margin: 5px;
+    text-decoration: none;
+    top: 10px;
+    left: -25px;
+  }
+  
+  .iconask a {
+    padding: 2px;
+    text-decoration: none;
+  
+  }
+  
+  ul .iconask{
+    list-style-type: none;
+    display: block;
+    width: 5px;
+    height: 30px;
+  }
+  
+  li .iconask {
+    height: 35px;
+    width: 35px;
+  }
+  
+  /*subbarra nav pequeña en la barra lateral*/
+  .bar {
+    background-color: #345362; 
+    width: 100px;
+    height: 3%;
+    position: fixed;
+    top: 50px;
+    left: 40px;
+    border: 1px solid #fff;
+  
+  }
+  
+=======
 }
 
 /*Buscador*/
@@ -153,25 +271,648 @@ li .iconask {
 
 }
 
+>>>>>>> 62f50c87dd3d53a8564651b2142c45c8f6d0b6aa
 /* iconos de la subbarra pequena */
-li .imgba {
-  display: flex;
-  justify-content: stretch;
-  /* padding: -5px 2px;*/
+.imgba {
   height: 15px;
   width: 15px;
-  margin: -11px;
-  right: -10px;
 }
 
-.subicons{
- /*display: block;*/
- text-decoration: none;
+/* Contenedor de los iconos (ul) */
+.iconsuba {
+  display: flex; /* Alinea los elementos hijos horizontalmente */
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding predeterminado */
+  margin: 2px; 
 }
+
+/* Elementos de la lista (li) */
+.liiconsuba {
+  margin-right: 6px; /* Espacio entre los iconos */
+  justify-content: space-around; /* Distribuye el espacio entre los elementos */
+  right: 50px;
+}
+  
+  
+/* barra lateral menu*/
+.barra-lateral {
+    list-style-type: none;
+    width: 100px;
+    height: 68.9%;
+    position: fixed;
+    top: 69px;
+    left: 40px;
+    background-color: #041424;
+    border: 1px solid #fff;
+    z-index: 1000; 
+    max-width: 1000px;
+    overflow-y: auto; /* barra de deslizamiento vertical */
+    overflow-x: hidden; /* barra de deslizamiento horizontal */
+  
+  }
+
+  .barra-lateral .list-ico .text {
+    font-size: 0; /* Ocultar texto */
+  }
+  
+ /*  .text{
+   color: #fff;
+  }
+  
+  a.text{
+    width: 70%;
+  } */
+
+  .barra-lateral .list-ico .text::before {
+    content: attr(data-icon); /* Mostrar icono */
+    font-size: 16px; /* Tamaño del icono */
+  }
+}
+  
+  .iblateral {
+    width: 150px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+  }
+  
+  .list-ico{
+   transition: height .4s;
+   height: 80%;
+   width: 150px;
+   height: 40px;
+   }
+  
+   .list-item{
+     width: 200px;
+     height: 20px;
+   }
+  
+   .list-item:hover{
+    transition: transform;
+   }
+  
+  /* img */
+  .imlateral {
+    position: relative;
+    top: 0px;
+    left: 2px;
+    padding: 8px;
+  }
+  
+  /* tamano de los iconos de la barra lateral */
+  .imlateral {
+    height: 48px;
+    width: 48px;
+  }
+  
+  
+/*   li {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    
+  }
+   */
+  
+  
+  /*  div ul li:hover{
+    padding-bottom: 10px; 
+   } */
+  
+/*   div ul li a{
+   display: block;
+   text-decoration: none;
+  }
+  
+  
+  div ul li .list_inside li{
+   display: block;
+   overflow: hidden;
+   width: 190px;
+   z-index: 1000;
+  
+  } */
+  
+   /* Estilo del submenú desplegable*/
+   .list_inside {
+     display: none;
+     overflow: hidden;
+     position: relative;
+     top: 20px;
+     width: 100px;
+     /* background-color: #086A87;   */
+     z-index: 1000;
+     margin-bottom: 15px;
+     left: -5px;
+  
+   }
+  
+  
+  /* Estilos de los li del submenú desplegable */
+  .sublista {
+    padding: 2px;
+    margin: 0px;
+    display: flex;
+    /* color: white; /* color letras de sub menu del menu lateral */ 
+    text-decoration: none;
+    padding-left: 10px;
+    width: 100px;
+    background-color: #22374a;
+    font-size: 0px;
+    box-shadow: 0 1px 1px rgb(0, 0, 0, .5);
+  
+  }
+  
+  .sublista:hover {
+   background-color: #031626;
+   transition-duration: inherit;
+  
+  }
+  
+  /* Estilos de los iconos del submenú desplegable */
+  #sub {
+    position: relative;
+    top: 0px;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+  }
+  
+  
+  
+  /* Estilos del puntero > del menú desplegable */
+  .list_buttom {
+    position: absolute;
+    align-items: center;
+    top: 12px; 
+    right: 10px;
+    height: 25px;
+    width: 25px;
+  }
+  
+  
+  .list_buttom:hover {
+    transform: rotate(90deg);
+    transition: transform;
+  }
+  
+  /* Estilos para mostrar el menú desplegable al pasar el cursor no tocar*/
+  .list-ico:hover .list_inside {
+    display: block;
+  }
+  
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    padding: 2px 2px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  
+  /* Estilo barra taller*/
+  h3 {
+    color: #fff;
+    padding: 8px;
+    margin: 4px;
+    border: 1px solid #fff;
+    background-color: #345362;
+  }
+  
+  p {
+    color: #000;
+    padding: 15px;
+    text-align: center;
+    height: 3%;
+  
+  
+  }
+  
+  /* Estilo ventana detras escribi codigo */
+  .code {
+    /* width: calc(100% - 100px);
+    height: calc(50% - 50px); */
+    position: fixed;
+    top: 100px;
+    left: 200px;
+    width: 43%;
+    height: 70.5%;
+   /*  width: 49.7%;
+    height: 66.5%; */
+    font-family: monospace;
+    font-size: 20px;
+    /*background-color: #262626;*/
+    /* background-color: #000; /* color de los numeros de las lineas */ 
+    background-color: #041424; /* color fondo de las lineas de salto */
+    color: #fff;
+    border: 1px solid #fff;
+    
+  }
+  
+  
+  /*Numeracion salto linea code*/
+  code:before {
+    counter-increment: line 1;
+    content: counter(line);
+    display: inline-block;
+    position: fixed;
+    top: 150px;
+    left: 200px;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  /*Ventana de escribir codigo*/
+   #codes-input {
+    position: fixed;
+    top: 150px;
+    left: 230px;
+    width: 38%;
+    height: 66%;
+    /* background-color: #031626;  */
+    /* background-color: #64e4fc; */
+    background-color: #fdfff3; /* color de fondo donde se escribe los codigos */
+    color: #000;
+    font-size: 30px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+  
+  /* icono de la ventana codigo */
+  .codec{
+    position: fixed;
+    top: 112px;
+    left: 58%;
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+  /*Division de Taller*/
+  .task {
+    position: fixed;
+    top: 100px;
+    left: 63%;
+    width: 36.7%;
+    height: 70.4%;
+    /*background-color: #0B4C5F;*/
+    background-color: #041424;
+    padding: 10px;
+    overflow-y: auto;
+    color: #000;
+    border: 1px solid #fff;
+  
+  }
+  
+  .codet{
+    position: fixed;
+    top: 108px;
+    left: 93%;
+    width: 40px;
+    height: 40px;
+    color: #000;
+  }
+  
+  
+  
+  /* Talleres mostrados de otros html en exercise*/
+  iframe{
+    position: fixed;
+    top: 90px;
+    left: 63.3%;
+    width: 36.7%;
+    height: 61.2%;
+    /* background-color: #64e4fc; /* color html index */ 
+    background-color: #041424;
+    padding: 10px;
+    overflow: auto;
+  
+  }
+  
+  /* .taskdown{
+   position: fixed;
+   top: 50px;
+   left: 63%;
+   width: 103%;  
+   background-color: #000;
+   border: 1px solid #fff;
+  } */
+  
+  /*Título task*/
+  .title-ta {
+   position: relative;
+   z-index: auto;
+   left: 0.2%;
+   top: 1.5px;
+    font-family: monospace;
+    font-size: 25px;
+    width: 104%;  
+    height: 46.5px;
+    color: #fff;
+    padding: 8px;
+    margin: -8px;
+    border: 1px solid #fff;
+    background-color: #345362;
+    
+    
+  }
+  
+  /*Division de View*/
+  .view {
+    position: fixed;
+    top: 47%;
+    left: 63%;
+    width: 36.7%;
+    height: 30%;
+    background-color: #041424;
+    padding: 10px;
+    overflow-y: auto;
+    color: #000;
+    border: 1px solid #fff;
+  
+  }
+  
+  /* Flecha */
+  .codev{
+    position: fixed;
+    top: 47.5%;
+    left: 93%;
+    width: 40px;
+    height: 40px;
+    color: #000;
+  }
+  .viewv{
+    position: relative;
+    top: 15px;
+    left: 0px;
+    width: 340px;
+    height: 200px;
+    /* background-color: #64e4fc; /* color html index */
+    background-color: #000;
+  }
+  
+  .viewt {
+    position: reltive;
+    top: 30px;
+    left: 0%;
+    width: 100%;
+    height: 40%;
+    /*background-color: #0B4C5F;*/
+    background-color: #041424;
+    overflow-y: auto;
+    color: #000;
+    border: 2px solid #fff;
+  
+  }
+  
+  h1.viewtext{
+    margin-top: 20px;
+  }
+  
+  .viewtext{
+    left: 10px;
+    padding: 4px;
+    color: #fff;
+    
+  }
+  
+   /* Estilo barra result*/
+  .title-resu{
+   font-family: monospace;
+   font-size: 40px;
+   color: #fff;
+   padding: 2px;
+   border: 1px solid #fff;
+   padding-right: 8px; 
+  }
+  
+  /* Titulo de result */
+  .result{
+   position: fixed;
+   top: 77%;
+   left: 50px;
+  /*  width: calc(100% - 200px);
+   height: calc(9.4% - 50px); */
+   width: 94.6%;
+   height: 15%;
+  background-color: #345362; 
+  border: 1px solid #fff;
+  
+  }
+  /* consola cmd mostrar resultado*/
+  #result-output {
+   position: fixed;
+   top: 80.1%;
+   left: 50px;
+  /*  width: calc(100% - 200px);
+   height: calc(50% - 50px); */
+   width: 100%;
+   height: 14%;
+   /* background-image: url("\img\Imagen15.png"); /* imagen consola  */
+  /*  background-repeat: repeat; */
+   /* background-size: 400px 230px; */
+   /* background-size: 100px; */
+   /* opacity: 0.2;  *//* opacidad para la imagen de fondo */
+   background-color: #000;
+   margin: 2px;
+   padding: 8px;
+   /* overflow: auto; */
+   color: #fff;
+   font-size: 30px;  
+  } 
+  
+  
+  
+  #result-output {
+   color: #fff;
+  }
+  
+  /* equis de cmd*/
+  .equis {
+   position: fixed;
+   top: 77%;
+   left: 95.5%; 
+   list-style-type: none;
+   display: flex;
+   justify-content: space-around;
+   padding: 2px 1px;
+   color: #fff;
+   font-family: monospace;
+   font-size: 40px;
+  }
+  
+  /* barra inferior */
+  .barra-infe {
+    position: fixed;
+    top: 94%;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    /*background-color: #151515;*/
+    /* background-color: #0e131b; */
+    background-color: #22374a;
+    /* border: 1px solid #000; */
+  }
+  
+  .infe-peq {
+    align-items: center;
+  }
+  
+  /*Letras inferior*/
+  .letra-infe, .hc {
+    color: #fff;
+    float: right;
+    padding: 6px 6px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: monospace;
+  }
+  
+  .letra-infe{
+    font-size: 50PX;
+  }
+  
+  /* icono de error y  */
+  .hc2 {
+    color: #fff;
+    float: left;
+    padding: 20px 20px;
+    padding-top: 22px;
+    text-align: center;
+    font-size: 40PX;
+    font-family: monospace;
+  }
+  
+  /* numero de error */
+  .letrainfe2{
+    position: relative;
+    display: flex;
+    left: 0px;
+    font-size: 50PX;
+    color: #fff;
+    float: left;
+    padding: 20px 20px;
+    padding-top: 22px;
+    text-align: center;
+  }
+  
+  .icoin4 {
+    position: relative;
+    display: flex;
+    left: 10px;
+    height: 53px;
+    width: 53px;
+   /*  height: 13px;
+    width: 13px; */
+    justify-content: space-between;
+   /*  margin-left: -8px; 
+    padding: 4px 2px  0px  0px; */
+    
+   } 
+  
+  
+  /*iconos barra inferior*/
+  .icoin1,.icoin2, .icoin3 {
+   position: relative;
+   display: flex;
+   left: 10%;
+   height: 53px;
+   width: 53px;
+  /*  height: 13px;
+   width: 13px; */
+   justify-content: space-between;
+   margin-left: -8px; 
+   padding: 4px 2px  0px  0px;
+   
+  } 
+  
+  
+}
+
+
+
+
+
+/* Tamaño tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Establecer el estilo de la barra de navegación */
+  .barra-nav {
+    height: 80px;
+  }
+
+  /*Buscador*/
+#SearchDiv {
+  margin: 8px; 
+  padding: 10px;
+ 
+ }
+ 
+ /*input del buscador*/
+ #buscainput {
+   height: 30%;
+ }
+ 
+ /* Estilo iconos barra Navegación */
+ .icons {
+   margin: 2px;
+ 
+ }
+ 
+ /* Estilo de los enlaces con iconos */
+ .icons a {
+   padding: 1px;
+ 
+ }
+ 
+ 
+ /* Estilo del logo */
+ .logo {
+   padding: 2px;
+ 
+ }
+ 
+ /* tamano del logo */
+ .imlogo {
+   height: 75px;
+   width: 75px;
+ }
+ 
+ /* Ajusta el tamaño de los iconos de la barra de navegacion */
+ li .imico {
+   height: 70px;
+   width: 70px;
+ }
+ 
+ /* barra lateral larga */
+ .ara-lat{
+   height: 84.5%;
+   position: fixed;
+   top: 80px;
+   /* border: 1px solid #fff; */
+ }
+ 
+ /*subbarra nav pequeña en la barra lateral*/
+ .bar {
+   /* background-color: #151515;  */
+   height: 2.1%;
+   top: 80px;
+ }
 
 
 /* barra lateral menu*/
 .barra-lateral {
+<<<<<<< HEAD
+  height: 64.5%;
+  top: 100px;
+
+}
+
+=======
   list-style-type: none;
   width: 150px;
   height: 68.9%;
@@ -212,162 +953,20 @@ div ul{
   padding-left: 5px;
 }
 
+>>>>>>> 62f50c87dd3d53a8564651b2142c45c8f6d0b6aa
 .list-ico{
- transition: height .4s;
- height: 80%;
- width: 200px;
- height: 40px;
- }
-
- .list-item{
-   width: 200px;
-   height: 20px;
- }
-
- .list-item:hover{
-  transition: transform;
- }
-
-/* img */
-.imlateral {
-  position: relative;
-  top: 8px;
-  left: 0;
-  padding: 4px;
-}
-
-/* tamano de los iconos de la barra lateral */
-li .imlateral {
-  height: 35px;
-  width: 35px;
-}
-
-
-li {
-  text-decoration: none;
-  color: #000;
-  position: relative;
-  display: inline-block;
-  margin-right: 10px;
-  
-}
-
-
-
-/*  div ul li:hover{
-  padding-bottom: 10px; 
- } */
-
-div ul li a{
- display: block;
- text-decoration: none;
-}
-
-
-div ul li .list_inside li{
- display: block;
- overflow: hidden;
- width: 190px;
- z-index: 1000;
-
-}
-
- /* Estilo del submenú desplegable*/
- .list_inside {
-   display: none;
-   overflow: hidden;
-   position: relative;
-   top: 20px;
-   width: 200px;
-   background-color: #444;
-   /* background-color: #086A87;   */
-   z-index: 1000;
-   margin-bottom: 15px;
+ width: 150px;
 
  }
 
-
-/* Estilos de los li del submenú desplegable */
-.sublista {
-  padding: 2px;
-  margin: 0px;
-  display: flex;
-  color: white; /* color letras de sub menu del menu lateral */
-  text-decoration: none;
-  padding-left: 20px;
-  background-color: #444;
-  font-size: 12px;
-  box-shadow: 0 1px 1px rgb(0, 0, 0, .5);
-
-}
-
-.sublista:hover {
- background-color: #031626;
- transition-duration:inherit;
-}
-
-/* Estilos de los iconos del submenú desplegable */
-#sub {
-  position: relative;
-  top: 0px;
-  width: 25px;
-  height: 25px;
-  padding: 2px;
-}
-
-
-
-/* Estilos del puntero > del menú desplegable */
-.list_buttom {
-  position: absolute;
-  align-items: center;
-  top: 12px; 
-  left: 150px;
-  height: 25px;
-  width: 25px;
-}
-
-
-.list_buttom:hover {
-  transform: rotate(90deg);
-  transition: transform;
-}
-
-/* Estilos para mostrar el menú desplegable al pasar el cursor no tocar*/
-.list-ico:hover .list_inside {
-  display: block;
-}
-
-a {
-  list-style: none;
-  text-decoration: none;
-  color: #000;
-  padding: 2px 2px;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-
-/* Estilo barra taller*/
-h3 {
-  color: #fff;
-  padding: 8px;
-  margin: 4px;
-  border: 1px solid #fff;
-  background-color: #345362;
-}
-
-p {
-  color: #000;
-  padding: 15px;
-  text-align: center;
-  height: 3%;
-
-
-}
 
 /* Estilo ventana detras escribi codigo */
 .code {
+<<<<<<< HEAD
+ 
+  top: 80px;
+  height: 67.3%;
+=======
   /* width: calc(100% - 100px);
   height: calc(50% - 50px); */
   position: fixed;
@@ -384,24 +983,17 @@ p {
   background-color: #041424; /* color fondo de las lineas de salto */
   color: #fff;
   border: 1px solid #fff;
+>>>>>>> 62f50c87dd3d53a8564651b2142c45c8f6d0b6aa
   
 }
 
 
-/*Numeracion salto linea code*/
-code:before {
-  counter-increment: line 1;
-  content: counter(line);
-  display: inline-block;
-  position: fixed;
-  top: 150px;
-  left: 200px;
-  padding: 10px;
-  color: #fff;
-}
-
 /*Ventana de escribir codigo*/
  #codes-input {
+<<<<<<< HEAD
+  top: 130px;
+  height: 66%;
+=======
   position: fixed;
   top: 150px;
   left: 230px;
@@ -414,6 +1006,7 @@ code:before {
   font-size: 30px;
   overflow-y: auto;
   overflow-x: auto;
+>>>>>>> 62f50c87dd3d53a8564651b2142c45c8f6d0b6aa
 }
 
 /* icono de la ventana codigo */
@@ -704,6 +1297,8 @@ border: 1px solid #fff;
  
 } 
 
+<<<<<<< HEAD
+=======
 /* tamano cel */
 /* @media screen and(max-width: 425px) {
 
@@ -717,11 +1312,18 @@ div.barra.barra-nav {
   height: 40px;
 }
  
+>>>>>>> 62f50c87dd3d53a8564651b2142c45c8f6d0b6aa
 }
 /* tamano pc */
-@media screen and(min-width: 1024px) {
-
+@media screen and (min-width: 1024px) {
+  /* Estilos para pantallas con un ancho mínimo de 1024px */
 }
+
+
+
+
+
+
 
 
 
