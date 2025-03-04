@@ -98,33 +98,17 @@
     }
 
     h3 {
-      position: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-size: 56px;
-      /* font-weight:700px; */
-      color: #295a87;
-      margin: 20px 0;
-      width: 180%;
-      font-family: monospace;
-    }
+  font-size: 56px;
+  color: #295a87;
+  margin: 20px 0;
+  width: auto; /* Quita el ancho del 180% */
+}
 
-    p {
-      width: 180%;
-      height: 5%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      font-size: 15px;
-      color: #647381;
-      font-family: monospace;
-      padding-right: 30%;
-
-    }
+p {
+  width: auto; /* Ajusta automáticamente el ancho */
+  font-size: 18px; /* Tamaño más consistente para móviles y escritorio */
+  color: #647381;
+}
 
     /* .home-content p:nth-of-type(2){
   margin-bottom: 30px;
@@ -156,7 +140,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 180%;
     }
 
     .btn {
@@ -175,7 +158,6 @@
       margin: 30px 0;
       text-align: center;
       cursor: pointer;
-      width: 110px;
     }
 
     /*KEYFRAMES ANIMATION*/
