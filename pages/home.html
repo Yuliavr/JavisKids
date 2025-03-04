@@ -72,20 +72,19 @@
       padding: 0 10%;
     }
 
+    /* Ajustes en el CSS */
     .home {
       position: relative;
-      width: 80%;
+      width: 100%;
       height: 100vh;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 70px 10% 0;
-
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center; /* Centra verticalmente */
     }
 
     .home-content {
-      max-width: 800px;
-    }
+     text-align: center; /* Asegura que el contenido esté alineado al centro */
+}
 
     .home-content h3 {
       font-size: 56px;
@@ -99,32 +98,18 @@
     }
 
     h3 {
-      position: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       font-size: 56px;
-      /* font-weight:700px; */
       color: #295a87;
       margin: 20px 0;
-      width: 180%;
+      width: auto; /* Quita el ancho del 180% */
       font-family: monospace;
     }
 
-    p {
-      width: 180%;
-      height: 5%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      font-size: 15px;
-      color: #647381;
-      font-family: monospace;
-      padding-right: 30%;
-
+  p {
+    width: auto; /* Ajusta automáticamente el ancho */
+    font-size: 18px; /* Tamaño más consistente para móviles y escritorio */
+    color: #647381;
+    font-family: monospace;
     }
 
     /* .home-content p:nth-of-type(2){
@@ -157,7 +142,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 180%;
+      font-family: monospace;
     }
 
     .btn {
@@ -176,7 +161,6 @@
       margin: 30px 0;
       text-align: center;
       cursor: pointer;
-      width: 110px;
     }
 
     /*KEYFRAMES ANIMATION*/
@@ -208,7 +192,7 @@
   <section class="home">
     <div class="home-content">
       <h3>JavisKids</h3>
-      <p>Is a web platform designed to teach programming and development of multimedia projects to children and young
+      <p>Is a web platform designed to teach programming and development <br> of multimedia projects to children and young
         people with a real text editor.
       </p>
       <div class="btns">
