@@ -42,7 +42,7 @@ font-size: 25px;
       text-decoration: none;
       width: 80px;
       height: 80px;
-      margin-left: -90px; /* Mueve el logo completamente a la izquierda */
+      margin-left: 0px; /* Mueve el logo completamente a la izquierda */
       /* cursor:default;
   animation:slideRight 1s ease forwards; */
     }
@@ -72,34 +72,39 @@ font-size: 25px;
 
     .language-dropdown {
   position: relative;
-  margin-right: -100px; /* Mueve el logo completamente a la izquierda */
+  margin: 0 auto; /* Mueve el logo completamente a la izquierda */
+      text-align: center; /* Asegura que esté alineado */
 
 }
 
 .dropdown-button {
-  background-color: #182739;
-  color: white;
-  padding: 10px 20px;
+  background-color: transparent;
+  /*color: white; */
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 32px; /* Hace el ícono más grande */
+  padding: 8px; /* Asegura que no sea demasiado grande */
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
-  min-width: 160px;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+    color: white; /* Cambia el color del texto a blanco */
+  /* background-color: #182739; */
+  min-width: 120px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 8px; 
   z-index: 1;
+  margin-left: -25px; /* Mueve el logo completamente a la izquierda */
 }
 
 .dropdown-content button {
-  background-color: transparent;
-  color: #0c141e;
-  border: none;
+ background-color: transparent; /* Fondo transparente para los botones */
+    color: white; /* Texto blanco */
+    border: none;
   text-align: left;
   padding: 10px;
   cursor: pointer;
@@ -107,11 +112,13 @@ font-size: 25px;
 }
 
 .dropdown-content button:hover {
-  background-color: #ddd;
+  background-color: #182739; 
 }
 
 .language-dropdown:hover .dropdown-content {
-  display: block;
+  display: block; 
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
+  color: white; /* Asegura que las letras sigan siendo blancas */
 }
 
 
@@ -140,8 +147,13 @@ font-size: 25px;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin: 0 auto;
+      max-width: 90%;
 }
 
+    .home-content p {
+    margin-bottom: 15px; /* Espaciado uniforme entre párrafos */
+}
 
     #title {
       font-size: 80px;
@@ -154,7 +166,7 @@ font-size: 25px;
 
   #description {
     /*width: auto;*/ /* Ajusta automáticamente el ancho */
-    max-width: 900px; /* Limita el ancho del texto */
+    max-width: 1000px; /* Limita el ancho del texto */
     margin: 0 auto; /* Centra el contenido */
     text-align: center; /* Texto centrado */
     font-size: 25px; /* Tamaño más consistente para móviles y escritorio */
@@ -169,6 +181,9 @@ font-size: 25px;
   margin-bottom: 30px;
 } */
 
+    p {
+    margin-bottom: 15px; /* Espaciado más compacto para párrafos */
+}
     .icon-img {
       margin-left: 180px;
     }
@@ -195,6 +210,8 @@ font-size: 25px;
       justify-content: center;
       align-items: center;
       font-family: monospace;
+      margin: 10px 0; /* Reduce el espacio entre botones y otros elementos */
+
     }
 
     .btn {
@@ -227,6 +244,25 @@ font-size: 25px;
         opacity: 1;
       }
     }
+
+    @media screen and (max-width: 768px) {
+    h3 {
+        font-size: 20px; /* Tamaño reducido para pantallas pequeñas */
+      aling-text: center;
+      
+    }
+
+    p {
+        font-size: 12px; /* Reduce el tamaño del párrafo */
+        line-height: 1.4; /* Ajusta el espaciado entre líneas */
+      aling-text: center;
+    }
+
+    .btn {
+        font-size: 14px; /* Tamaño del texto del botón */
+        padding: 10px 20px; /* Botón más compacto */
+    }
+}
   </style>
 </head>
 
@@ -255,7 +291,7 @@ font-size: 25px;
   <section class="home">
     <div class="home-content">
       <h3 id="title">JavisKids</h3>
-      <p id="description">>Is a web platform designed to teach programming and development <br> of multimedia projects to children and young
+      <p id="description">>JavisKids is a Web Platform designed to teach programming and Development of multimedia projects to children and young
         people with a real text editor.
         <br><br>"Code from Childhood, Future from Reality"
       </p>
@@ -275,19 +311,19 @@ font-size: 25px;
       const translations = {
     en: {
         title: "JavisKids",
-        description: `JavisKids Is a web Platform designed to teach Programming and Development of multimedia projects to children and young people with a real text editor.\n\n"Code from Childhood, Future from Reality"`
+        description: `>JavisKids Is a Web Platform designed to teach Programming and Development of multimedia projects to children and young people with a real text editor.\n\n"Code from Childhood, Future from Reality"`
     },
     es: {
         title: "JavisKids",
-        description: `JavisKids Es una Plataforma web diseñada para enseñar programación y Desarrollo de proyectos multimedia a niños y jóvenes con un editor de texto real.\n\n"Codigo desde la Infancia, Futuro desde la Realidad"`
+        description: `>JavisKids Es una Plataforma Web diseñada para enseñar programación y Desarrollo de proyectos multimedia a niños y jóvenes con un editor de texto real.\n\n"Codigo desde la Infancia, Futuro desde la Realidad"`
     },
     fr: {
         title: "JavisKids",
-        description:  `JavisKids C'est une Plateforme web conçue pour enseigner la Programmation et le Développement de projets multimédias aux enfants et aux jeunes avec un éditeur de texte réel.\n\n"Coder dès l'Enfance, Avenir depuis la Réalité"`
+        description:  `>JavisKids C'est une Plateforme Web conçue pour enseigner la Programmation et le Développement de projets multimédias aux enfants et aux jeunes avec un éditeur de texte réel.\n\n"Coder dès l'Enfance, Avenir depuis la Réalité"`
     },
     de: {
         title: "JavisKids",
-        description: `JavisKids ist eine Webplattform, die entwickelt wurde, um Kindern und Jugendlichen Programmierung und die Entwicklung multimedialer Projekte beizubringen.\n\n"Programmieren von Kindheit an, Zukunft aus der Realität"`
+        description: `>JavisKids ist eine WebPlattform, die entwickelt wurde, um Kindern und Jugendlichen Programmierung und die Entwicklung multimedialer Projekte beizubringen.\n\n"Programmieren von Kindheit an, Zukunft aus der Realität"`
     }
 };
 
