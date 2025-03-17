@@ -136,19 +136,12 @@ font-size: 25px;
     }
 
     .home-content {
-     text-align: center; /* Asegura que el contenido esté alineado al centro */
+      text-align: center; /* Asegura que el contenido esté alineado al centro */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 }
 
-    .home-content h3 {
-      font-size: 56px;
-      font-weight: 700px;
-      color: #22374a;
-      margin: 20px 0;
-    }
-
-    .home-content p {
-      font-size: 30px;
-    }
 
     #title {
       font-size: 80px;
@@ -156,15 +149,20 @@ font-size: 25px;
       margin: 20px 0;
       width: auto; /* Quita el ancho del 180% */
       font-family: monospace;
+      text-align: center; /* Texto centrado */
     }
 
   #description {
-    width: auto; /* Ajusta automáticamente el ancho */
+    /*width: auto;*/ /* Ajusta automáticamente el ancho */
+    max-width: 900px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Centra el contenido */
+    text-align: center; /* Texto centrado */
     font-size: 25px; /* Tamaño más consistente para móviles y escritorio */
     color: #647381;
     font-family: monospace;
     overflow-wrap: break-word;
-    line-height: 1.5;
+    line-height: 1.5; /* Espaciado cómodo entre líneas */
+    word-wrap: break-word; /* Permite que las palabras largas se dividan */
     }
 
     /* .home-content p:nth-of-type(2){
@@ -237,7 +235,7 @@ font-size: 25px;
     <img class="logo" src="icons/logo.png" alt="logo" />
 
     <nav class="navbar">
-      <a href="shop.html"><img class="dative" src="icons/homecmd.png" alt="consola" /></a>
+      <a href="console.html"><img class="dative" src="icons/homecmd.png" alt="consola" /></a>
       <a href="contact.html"><img class="" src="icons/contact.png" alt="contact" /></img></a>
       <a href="shop.html"><img class="" src="icons/shop.png"  alt="shop" /></img></a>
 
