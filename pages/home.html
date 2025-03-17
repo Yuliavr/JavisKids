@@ -80,7 +80,6 @@ font-size: 25px;
 .dropdown-button {
   background-color: transparent;
   /*color: white; */
-  padding: 10px 20px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -92,6 +91,8 @@ font-size: 25px;
 .dropdown-content {
   display: none;
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+    color: white; /* Cambia el color del texto a blanco */
   /* background-color: #182739; */
   min-width: 120px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -101,9 +102,9 @@ font-size: 25px;
 }
 
 .dropdown-content button {
- /* background-color: transparent;*/
-  color: #0c141e; 
-  border: none;
+ background-color: transparent; /* Fondo transparente para los botones */
+    color: white; /* Texto blanco */
+    border: none;
   text-align: left;
   padding: 10px;
   cursor: pointer;
@@ -115,9 +116,9 @@ font-size: 25px;
 }
 
 .language-dropdown:hover .dropdown-content {
-  display: block;
-  color: #fff;
-  background-color: #182739;
+  /* display: block; */
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
+  color: white; /* Asegura que las letras sigan siendo blancas */
 }
 
 
