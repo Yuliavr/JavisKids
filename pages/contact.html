@@ -15,18 +15,20 @@
 
         /* Navbar */
 
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 20px 10%;
-      background: transparent;
-      display: flex;
-      justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
-      align-items: center;
-      z-index: 100;
-    }
+    /* Menú fijo, destacando su estética */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar dimensión */
+}
 
     .logo {
       font-size: 25px;
@@ -149,16 +151,16 @@
             text-align: center;
             color: #295a87;
         }
-        form {
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #1c3349;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            color: #fff;
-            box-shadow: 0 0 5px #0ef;
-        }
+        /* Ajusta la posición del formulario para que esté más abajo */
+form {
+    max-width: 400px;
+    margin: 200px auto; /* Esto asegura que el formulario esté centrado con más espacio desde el menú */
+    padding: 20px;
+    background-color: #1c3349;
+    box-shadow: 0 0 5px #0ef;
+    border-radius: 8px;
+    color: #fff;
+}
         label {
             display: block;
             margin-bottom: 8px;
@@ -233,7 +235,8 @@
     <script>
         // Funcionalidad JavaScript
         function enviarFormulario() {
-            const name = document.getElementById('name, last').value;
+            const name = document.getElementById('name').value;
+            const last = document.getElementById('last').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
