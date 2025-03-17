@@ -271,11 +271,22 @@ font-size: 25px;
   </section>
 <script>
     // Funcionalidad JavaScript
-    function changeLanguage(lang) {
-        alert('Idioma cambiado a: ' + lang.toUpperCase());
-        // Aquí podrías agregar lógica adicional para cambiar el idioma de la página,
-        // como recargar contenido traducido o redirigir a otra URL.
+
+      const translations = {
+    en: {
+        title: "JavisKids",
+        description: "Is a web platform designed to teach programming and development of multimedia projects to children and young people with a real text editor. Code from Childhood, Future from Reality"
+    },
+    es: {
+        title: "JavisKids",
+        description: "Es una plataforma web diseñada para enseñar programación y desarrollo de proyectos multimedia a niños y jóvenes con un editor de texto real. Código desde la infancia, futuro desde la realidad"
     }
+};
+
+function changeLanguage(lang) {
+    document.querySelector('h3').innerText = translations[lang].title;
+    document.querySelector('p').innerText = translations[lang].description;
+}
 </script>
 
 </body>
