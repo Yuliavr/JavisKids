@@ -30,35 +30,38 @@
       padding: 20px 10%;
       background: transparent;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
       align-items: center;
       z-index: 100;
     }
 
     .logo {
-      font-size: 25px;
+font-size: 25px;
       /* color:#0ef; */
       /* border:3px solid #0ef; */
       text-decoration: none;
       width: 80px;
       height: 80px;
+      margin-left: -90px; /* Mueve el logo completamente a la izquierda */
       /* cursor:default;
   animation:slideRight 1s ease forwards; */
     }
 
     .navbar {
       display: flex;
-      justify-content: center; /* Asegura la distribución horizontal */
+      justify-content: flex-end; /* Alinea los íconos a la derecha */
       align-items: center; /* Alinea los iconos verticalmente */
+      gap: 15px; /* Espaciado uniforme entre los íconos */
     }
     .navbar img {
       /* font-size:15px; */
       color: #ffff;
       text-decoration: none;
-      /* font-weight:500; */
-      margin: 0 15px; /* Agrega espacio entre los iconos */
+      /* font-weight:500; */ /* poner letras negritas */
       width: 40px;
       height: 40px;
+      /* margin: 0 10px; /* Espaciado entre íconos */ 
+      margin-right: 0px; /* Mueve el logo completamente a la izquierda */
     }
 
     /*cambia color al nav*/
@@ -66,6 +69,51 @@
     .navbar a.active {
       color: #0c141e;
     }
+
+    .language-dropdown {
+  position: relative;
+  margin-right: -100px; /* Mueve el logo completamente a la izquierda */
+
+}
+
+.dropdown-button {
+  background-color: #182739;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.dropdown-content button {
+  background-color: transparent;
+  color: #0c141e;
+  border: none;
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-content button:hover {
+  background-color: #ddd;
+}
+
+.language-dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
     .section {
       position: relative;
@@ -187,10 +235,20 @@
     <img class="logo" src="icons/logo.png" alt="logo" />
 
     <nav class="navbar">
-      <img class="dative" src="icons/homecmd.png" alt="consola" />
-      <img class="" src="icons/contact.png" alt="contact" />
-      <img class="ative" src="icons/shop.png"  alt="shop" />
-      <img class="" src="icons/trans.png"  alt="translate" />
+      <a href="./pages/shop.html"><img class="dative" src="icons/homecmd.png" alt="consola" /></a>
+      <a href="./pages/contact.html"><img class="" src="icons/contact.png" alt="contact" /></img></a>
+      <a href="./pages/shop.html"><img class="" src="icons/shop.png"  alt="shop" /></img></a>
+
+      <!-- Colocamos el idioma justo al lado del carrito -->
+  <div class="language-dropdown">
+    <button class="dropdown-button">🌍</button>
+    <div class="dropdown-content">
+      <button onclick="changeLanguage('es')">ES - Español</button>
+      <button onclick="changeLanguage('en')">EN - English</button>
+      <button onclick="changeLanguage('fr')">FR - Français</button>
+      <button onclick="changeLanguage('de')">DE - Deutsch</button>
+    </div>
+  </div>
     </nav>
   </header>
 
@@ -211,7 +269,14 @@
   </div> -->
 
   </section>
-
+<script>
+    // Funcionalidad JavaScript
+    function changeLanguage(lang) {
+        alert('Idioma cambiado a: ' + lang.toUpperCase());
+        // Aquí podrías agregar lógica adicional para cambiar el idioma de la página,
+        // como recargar contenido traducido o redirigir a otra URL.
+    }
+</script>
 
 </body>
 
