@@ -47,6 +47,12 @@ font-size: 25px;
   animation:slideRight 1s ease forwards; */
     }
 
+       .navbar .logo:hover {
+       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+       border-radius: 8px;
+}
+
     .navbar {
       display: flex;
       justify-content: flex-end; /* Alinea los íconos a la derecha */
@@ -63,14 +69,14 @@ font-size: 25px;
       /* margin: 0 10px; /* Espaciado entre íconos */ 
       margin-right: 0px; /* Mueve el logo completamente a la izquierda */
       padding: 4px; /* Asegura que no sea demasiado grande */
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
 }
     
 
     /*cambia color al nav*/
     .navbar img:hover {
-      transform: scale(1.2); /* Aumenta ligeramente el tamaño al hacer hover */
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.6); /* Agrega un resplandor o sombra */
+       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+       border-radius: 8px;
 }
 
     .language-dropdown {
@@ -89,6 +95,13 @@ font-size: 25px;
   font-weight: bold;
   font-size: 32px; /* Hace el ícono más grande */
   padding: 8px; /* Asegura que no sea demasiado grande */
+}
+
+.dropdown-button:hover {
+   background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+   border-radius: 8px;
+  
 }
 
 .dropdown-content {
@@ -116,6 +129,7 @@ font-size: 25px;
 
 .dropdown-content button:hover {
   background-color: #182739; 
+  
 }
 
 .language-dropdown:hover .dropdown-content {
