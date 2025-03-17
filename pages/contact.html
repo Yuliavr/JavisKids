@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_JavisKids</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #041424;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1c3349;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            box-shadow: 0 0 5px #0ef;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 200px; /* Haciendo el cuadro más alto */
+        }
+
+        button {
+            /* background-color: #007bff; */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #0c141e;
+
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact</h1>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="last">Last:</label>
+        <input type="text" id="last" name="last" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="button" onclick="enviarFormulario()">Send</button>
+    </form>
+
+    <script>
+        // Funcionalidad JavaScript
+        function enviarFormulario() {
+            const name = document.getElementById('name, last').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert('¡Thank you, ' + name + '!We have received your message.');
+                document.getElementById('contactForm').reset();
+            } else {
+                alert('Please, fill out all fields before submitting.');
+            }
+        }
+    </script>
+</body>
+</html>
