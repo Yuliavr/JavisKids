@@ -163,6 +163,7 @@ font-size: 25px;
     font-size: 30px; /* Tamaño más consistente para móviles y escritorio */
     color: #647381;
     font-family: monospace;
+    overflow-wrap: break-word;
     }
 
     /* .home-content p:nth-of-type(2){
@@ -289,7 +290,7 @@ font-size: 25px;
 
 function changeLanguage(lang) {
    document.getElementById('title').innerText = translations[lang].title;
-    document.getElementById('description').innerText = translations[lang].description;
+   document.getElementById('description').innerText = translations[lang].description;
 }
 </script>
 
