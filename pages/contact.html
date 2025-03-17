@@ -59,6 +59,27 @@
     </style>
 </head>
 <body>
+    <header class="header">
+    <a href="../index.html"><img class="logo" src="icons/logobluec.png" alt="logo" /></a>
+
+    <nav class="navbar">
+      <a href="console.html"><img class="dative" src="icons/cmdedi.png" alt="consola" /></a>
+      <a href="contact.html"><img class="contact" src="icons/contact.png" alt="contact" /></img></a>
+      <a href="shop.html"><img class="" src="icons/shop.png"  alt="shop" /></img></a>
+      
+
+      <!-- Colocamos el idioma justo al lado del carrito -->
+  <div class="language-dropdown">
+    <button class="dropdown-button">🌍</button>
+    <div class="dropdown-content">
+      <button onclick="changeLanguage('es')">ES - Español</button>
+      <button onclick="changeLanguage('en')">EN - English</button>
+      <button onclick="changeLanguage('fr')">FR - Français</button>
+      <button onclick="changeLanguage('de')">DE - Deutsch</button>
+    </div>
+  </div>
+    </nav>
+  </header>
     <h1>Contact</h1>
     <form id="contactForm">
         <label for="name">Name:</label>
