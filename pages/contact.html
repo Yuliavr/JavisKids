@@ -12,6 +12,139 @@
             padding: 0;
             background-color: #041424;
         }
+
+        /* Navbar */
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10%;
+      background: transparent;
+      display: flex;
+      justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 25px;
+      text-decoration: none;
+      width: 80px;
+      height: 80px;
+      margin-left: 0px; /* Mueve el logo completamente a la izquierda */
+      /* cursor:default;
+     animation:slideRight 1s ease forwards; */
+     /* color:#0ef; */
+     /* border:3px solid #0ef; */
+    }
+
+    .navbar .logo:hover {
+       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+       border-radius: 8px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-end; /* Alinea los íconos a la derecha */
+      align-items: center; /* Alinea los iconos verticalmente */
+      gap: 15px; /* Espaciado uniforme entre los íconos */
+    }
+
+    .navbar img {
+      /* font-size:15px; */
+      color: #ffff;
+      text-decoration: none;
+      /* font-weight:500; */ /* poner letras negritas */
+      width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
+      height: 46px; /* Usa las mismas proporciones del ícono del globo */
+      /* margin: 0 10px; /* Espaciado entre íconos */ 
+      margin-right: 0px; /* Mueve el logo completamente a la izquierda */
+      padding: 4px; /* Asegura que no sea demasiado grande */
+    }
+    
+
+    /*cambia color al nav*/
+    .navbar img:hover {
+       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+       border-radius: 8px;
+    }
+
+    img.ative {
+      height: 36px;
+    } 
+
+     img.contact {
+      width: 50px;
+    } 
+/* 
+    img.dative {
+      width: 44px;
+      height: 48px;
+    }  */
+
+    .language-dropdown {
+  position: relative;
+  margin: 0 auto; /* Mueve el logo completamente a la izquierda */
+      text-align: center; /* Asegura que esté alineado */
+
+    }
+
+  .dropdown-button {
+  background-color: transparent;
+  /*color: white; */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 34px; /* Hace el ícono más grande */
+  padding: 0px; /* Asegura que no sea demasiado grande */
+    }
+
+.dropdown-button:hover {
+   background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+   border-radius: 8px;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+    color: white; /* Cambia el color del texto a blanco */
+  /* background-color: #182739; */
+  min-width: 120px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px; 
+  z-index: 1;
+  margin-left: -25px; /* Mueve el logo completamente a la izquierda */
+}
+
+.dropdown-content button {
+ background-color: transparent; /* Fondo transparente para los botones */
+    color: white; /* Texto blanco */
+    border: none;
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-content button:hover {
+  background-color: #182739; 
+  
+}
+
+.language-dropdown:hover .dropdown-content {
+  display: block; 
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
+  color: white; /* Asegura que las letras sigan siendo blancas */
+}
+
         h1 {
             text-align: center;
             color: #295a87;
