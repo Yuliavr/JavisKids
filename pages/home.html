@@ -142,6 +142,8 @@ font-size: 25px;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin: 0 auto;
+      max-width: 90%;
 }
 
 
@@ -229,6 +231,22 @@ font-size: 25px;
         opacity: 1;
       }
     }
+
+    @media screen and (max-width: 768px) {
+    h3 {
+        font-size: 28px; /* Tamaño reducido para pantallas pequeñas */
+    }
+
+    p {
+        font-size: 12px; /* Reduce el tamaño del párrafo */
+        line-height: 1.4; /* Ajusta el espaciado entre líneas */
+    }
+
+    .btn {
+        font-size: 14px; /* Tamaño del texto del botón */
+        padding: 10px 20px; /* Botón más compacto */
+    }
+}
   </style>
 </head>
 
