@@ -255,7 +255,7 @@ font-size: 25px;
   <section class="home">
     <div class="home-content">
       <h3>JavisKids</h3>
-      <p>Is a web platform designed to teach programming and development <br> of multimedia projects to children and young
+      <p id="description">>Is a web platform designed to teach programming and development <br> of multimedia projects to children and young
         people with a real text editor.
         <br><br>"Code from Childhood, Future from Reality"
       </p>
@@ -270,16 +270,20 @@ font-size: 25px;
 
   </section>
 <script>
-    // Funcionalidad JavaScript
+     // Funcionalidad JavaScript
 
       const translations = {
     en: {
         title: "JavisKids",
-        description: "Is a web platform designed to teach programming and development of multimedia projects to children and young people with a real text editor. Code from Childhood, Future from Reality"
+        description: `Is a web platform designed to teach programming and development of multimedia projects to children and young people with a real text editor.<br><br>"Code from Childhood, Future from Reality"`
     },
     es: {
         title: "JavisKids",
-        description: "Es una plataforma web diseñada para enseñar programación y desarrollo de proyectos multimedia a niños y jóvenes con un editor de texto real. Código desde la infancia, futuro desde la realidad"
+        description: `Es una plataforma web diseñada para enseñar programación y desarrollo de proyectos multimedia a niños y jóvenes con un editor de texto real.<br><br>"Codificar desde la niñez, futuro desde la realidad"`
+    },
+    fr: {
+        title: "JavisKids",
+        description: `C'est une plateforme web conçue pour enseigner la programmation et le développement de projets multimédias aux enfants et aux jeunes avec un éditeur de texte réel.<br><br>"Coder dès l'enfance, avenir depuis la réalité"`
     }
 };
 
