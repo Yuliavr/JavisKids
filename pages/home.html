@@ -288,8 +288,8 @@ font-size: 25px;
 };
 
 function changeLanguage(lang) {
-    document.querySelector('h3').innerText = translations[lang].title;
-    document.querySelector('p').innerText = translations[lang].description;
+   document.getElementById('title').innerText = translations[lang].title;
+    document.getElementById('description').innerText = translations[lang].description;
 }
 </script>
 
