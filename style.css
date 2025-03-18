@@ -16,8 +16,12 @@ body {
 
 .fade-out {
   opacity: 0;
-  transition: opacity 2s;
-  transition-delay: 0.5s; /* Agregado un pequeño retraso */
+  transition: opacity 2s ease-out; /* Duración de 2 segundos para el desvanecimiento */
+  /* transition-delay: 0.5s;  *//* Agregado un pequeño retraso */
+}
+
+.logo, #title, .footer {
+  opacity: 1; /* Totalmente visible al inicio */
 }
 
 .container {
