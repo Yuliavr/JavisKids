@@ -1,0 +1,225 @@
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Evita las barras de desplazamiento */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #041424;
+    }
+  
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #041424;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transition: opacity 2s;
+      transition-delay: 0.5s; /* Agregado un pequeño retraso */
+    }
+  
+    .logo {
+      cursor: pointer;
+    }
+  
+    .logojk {
+      position: relative;
+      width: 500px;
+      height: 520px;
+      overflow: hidden;
+      transform: scale(0.8);
+    }
+  
+    .logojk img {
+      position: absolute;
+      top: 0;
+      height: auto;
+      width: 100%;
+    }
+
+    .logo::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -30px;
+      width: 100%;
+      height: 120px;
+      /* background: #000; */
+      z-index: 2;
+    }
+  
+    .logo::after, h3::before, .footer-text::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400%;
+      height: 100%;
+      background: linear-gradient(to right, transparent, #041424, #041424);
+      z-index: 3;
+      animation: animate 2s linear forwards;
+    }
+  
+    @keyframes animate {
+      0% {
+        right: 0%;
+      }
+      100% {
+        right: -400%;
+      }
+    }
+  
+    @keyframes reverse-animate {
+      0% {
+        left: 0%;
+      }
+      100% {
+        left: -400%;
+      }
+    }
+  
+    .animate-logo::after, .animate-h3::before, .footer-text::before {
+      animation: animate 4s linear forwards;
+    }
+  
+    .reverse-animate-logo::after, .reverse-animate-h3::before, .footer-text::before{
+      animation: reverse-animate 4s linear forwards;
+    }
+  
+    .fade-out {
+      opacity: 0;
+      transition: opacity 2s;
+    }
+
+  
+    h3 {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: monospace;
+      color: #fff;
+      font-size: 70px;
+      text-transform: uppercase;
+      letter-spacing: 25px;
+      overflow: hidden;
+      margin-top: -50px;
+    }
+
+    .footer {
+  height: auto;
+  max-height: 100px; /* Ajusta según sea necesario */
+}
+  
+    .footer-text {
+      margin: 0;
+      width: 100%;
+      height: auto;
+      color: #fff;
+      text-align: center;
+      font-family: monospace;
+      font-size: 12px; /* Tamaño pequeño */
+      text-transform: uppercase;
+      letter-spacing: 5px; /* Ajuste del espaciado de letras */
+      overflow: hidden;
+      text-decoration: none;
+      margin-top: 20px; /* Ajuste del margen superior */
+    }
+
+    .footer-text::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #041424, transparent, transparent);
+      z-index: 3;
+      animation: reverse-animate 2s linear forwards;
+    }
+
+    /* Media queries para dispositivos móviles */
+    @media (max-width: 600px) {
+      .logojk {
+        width: 300px;
+        height: 320px;
+      }
+      
+      h3 {
+        font-size: 40px;
+        letter-spacing: 10px;
+      }
+      
+      .footer-text {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-top: 10px; /* Ajuste del margen superior */
+      }
+    }
+
+    /* Media queries para tablets */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .logojk {
+        width: 400px;
+        height: 420px;
+      }
+      
+      h3 {
+        font-size: 50px;
+        letter-spacing: 15px;
+      }
+      
+      .footer-text {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin-top: 20px; /* Ajuste del margen superior */
+      }
+    }
+
+    /* Media queries para portátiles */
+    @media (min-width: 1025px) and (max-width: 1440px) {
+      .logojk {
+        width: 450px;
+        height: 470px;
+      }
+      
+      h3 {
+        font-size: 60px;
+        letter-spacing: 20px;
+      }
+      
+      .footer-text {
+        font-size: 12px;
+        letter-spacing: 4px;
+        margin-top: 20px; /* Ajuste del margen superior */
+      }
+    }
+
+    /* Media queries para pantallas grandes */
+    @media (min-width: 1441px) {
+      .logojk {
+        width: 500px;
+        height: 520px;
+      }
+      
+      h3 {
+        font-size: 70px;
+        letter-spacing: 25px;
+      }
+      
+      .footer-text {
+        font-size: 14px;
+        letter-spacing: 5px;
+        margin-top: 20px; /* Ajuste del margen superior */
+      }
+    }
