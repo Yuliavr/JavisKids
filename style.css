@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100vh;  /* Permite que el contenido crezca más allá de la altura de la ventana si es necesario */
  /* overflow: hidden; *//* Evita las barras de desplazamiento */
   display: flex;
   flex-direction: column;
