@@ -20,15 +20,14 @@ body {
     transition-delay: 0.5s; /* Agregado un pequeño retraso */
   }
 
-.container {
+  .container {
     display: flex;
-    flex-direction: column; /* Apila el logo y el título verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    height: auto; /* Ajusta automáticamente según el contenido */
-    flex-grow: 1; /* Asegura que ocupe el espacio disponible */
+    flex-direction: column; /* Apila logo y texto */
+    align-items: center;
+    justify-content: center; /* Centra verticalmente el contenido principal */
+    flex-grow: 1; /* Permite que ocupe espacio flexible entre header y footer */
 }
+
 
 .logo {
     display: flex;
@@ -93,8 +92,8 @@ body {
     animation: reverse-animate 4s linear forwards;
   }
 
-#title {
-    margin-top: 20px; /* Espaciado entre el logo y el título */
+  #title {
+    margin-top: 20px; /* Ajusta el espacio entre logo y título */
     text-align: center;
     font-family: monospace;
     color: #fff;
@@ -104,14 +103,14 @@ body {
 }
 
 .footer {
-    width: 100%; /* Ocupa todo el ancho */
+    width: 100%;
     text-align: center;
     color: white;
-    background: transparent; /* Si necesitas fondo, puedes modificarlo aquí */
-    padding: 10px 0; /* Espaciado interno */
-    margin: 0; /* Elimina cualquier separación extra */
     font-size: 12px;
-  }
+    background: transparent;
+    padding: 10px 0; /* Espaciado interno */
+    margin: 0; /* Elimina espacio adicional */
+}
 
   .footer-text {
     margin: 0 auto;
