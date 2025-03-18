@@ -33,11 +33,12 @@ body {
   /*justify-content: flex-start; *//* Mantén los elementos en la parte superior */
   gap: 10px; /* Ajusta la separación entre el logo y el título */
   width: auto; /* Ajusta el ancho al contenido */
-  max-width: 90%; /* Limita al 90% del ancho del viewport */
-  height: 80vh; /* Considera la altura total menos la del footer */
+  max-width: 500px; /* Limita el contenedor al ancho deseado */
+  margin: 0 auto; /* Centra el contenedor */
 }
 
 #title {
+  width: auto; /* Ajusta al contenido */
   margin: 0; /* Ajusta el espacio entre logo y título */
   text-align: center;
   font-family: monospace;
@@ -51,12 +52,13 @@ body {
   display: inline-block; /* Ocupa solo el tamaño del contenido */
   text-align: center;
   width: auto;
-  max-width: 80%; /* Limita el ancho máximo al 80% del contenedor */
+  max-width: 300px; /* Limita el ancho máximo al 80% del contenedor */
   color: white;
   font-size: 12px;
   background: transparent;
   padding: 10px 0; /* Espaciado interno */
-  margin-top: 0; /* Empuja el footer hacia abajo si hay espacio sobrante */
+ /*  margin-top: 0; *//* Empuja el footer hacia abajo si hay espacio sobrante */
+  margin: 10px auto; /* Centra y reduce el margen superior e inferior */
 }
 
 .footer-text {
@@ -85,7 +87,9 @@ body {
 }
 
 .logo {
-  display: flex;
+  display: inline-block; /* Ocupa solo el tamaño del contenido */
+  width: auto;
+  max-width: 300px; /* Ajusta según tu preferencia */
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -140,11 +144,11 @@ body {
   }
 }
 
-.animate-logo::after, .animate-#title::before, .footer-text::before {
+.animate-logo::after, .animate-title::before, .footer-text::before {
   animation: animate 4s linear forwards;
 }
 
-.reverse-animate-logo::after, .reverse-animate-#title::before, .footer-text::before{
+.reverse-animate-logo::after, .reverse-animate-title::before, .footer-text::before{
   animation: reverse-animate 4s linear forwards;
 }
 
