@@ -4,6 +4,7 @@ body {
     padding: 0;
     width: 100%;
     /*height: 100vh;*/
+    min-height: 100vh; /* Permite que el contenido crezca más allá de la altura de la ventana si es necesario */
     overflow: hidden; /* Evita las barras de desplazamiento */
     display: flex;
     flex-direction: column;
@@ -25,9 +26,10 @@ body {
     flex-direction: column; /* Apila logo y texto */
     align-items: center;
     justify-content: center; /* Centra verticalmente el contenido principal */
-   /* flex-grow: 1;*/ /* Permite que ocupe espacio flexible entre header y footer */
+    /* flex-grow: 1;*/ /* Permite que ocupe espacio flexible entre header y footer */
+    /*justify-content: flex-start; *//* Mantén los elementos en la parte superior */
+     min-height: calc(100vh - 60px); /* Considera la altura total menos la del footer */
 }
-
 
 .logo {
     display: flex;
@@ -110,7 +112,7 @@ body {
     font-size: 12px;
     background: transparent;
     padding: 10px 0; /* Espaciado interno */
-    margin: 0; /* Elimina espacio adicional */
+    margin-top: auto; /* Empuja el footer hacia abajo si hay espacio sobrante */
 }
 
   .footer-text {
