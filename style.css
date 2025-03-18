@@ -27,6 +27,7 @@ body {
     justify-content: center; /* Centra verticalmente */
     width: 100%; /* Ocupa todo el ancho disponible */
     height: auto; /* Ajusta automáticamente según el contenido */
+    flex-grow: 1; /* Asegura que ocupe el espacio disponible */
 }
 
 .logo {
@@ -103,8 +104,13 @@ body {
 }
 
 .footer {
-    height: auto;
-    max-height: 100px; /* Ajusta según sea necesario */
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center;
+    color: white;
+    background: transparent; /* Si necesitas fondo, puedes modificarlo aquí */
+    padding: 10px 0; /* Espaciado interno */
+    margin: 0; /* Elimina cualquier separación extra */
+    font-size: 12px;
   }
 
   .footer-text {
