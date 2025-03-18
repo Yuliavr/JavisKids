@@ -21,19 +21,21 @@ body {
   }
 
   .logo {
-
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%; /* Toma todo el ancho del contenedor */
     cursor: pointer;
+    height: auto; /* Permite ajustar según el contenido */
   }
 
   .logojk {
     width: 500px;
-    height: 520px;
-    object-fit: contain; /* Asegura que la imagen no se deformará */
-    position: relative;
+ /*    height: 520px; */
+    height: auto; /* Mantiene la proporción del logo */
+    margin: 0 auto;
+    /* object-fit: contain; /* Asegura que la imagen no se deformará */
+    /* position: relative; */
     /* display: block;
     margin: auto;
     transform: scale(0.8); */
@@ -90,7 +92,18 @@ body {
   }
 
   #title {
-    position: relative;
+    margin: 20px 0 0; /* Añade espacio entre el logo y el título */
+    text-align: center;
+    font-family: monospace;
+    color: #fff;
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 25px;
+    overflow: hidden;
+
+
+
+    /* position: relative;
     margin: 0 auto;
     padding: 0;
     text-align: center;
@@ -100,7 +113,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 25px;
     overflow: hidden;
-    margin-top: -50px;
+    margin-top: -50px; */
   }
 
   .footer {
