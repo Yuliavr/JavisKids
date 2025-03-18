@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="logo" onclick="reverseAnimation(); playAudio()">
-    <img class="logojk" src="logo/img/logo.png" alt="JavisKids Logo" />
+<body>
+  <div class="container">
+    <div class="logo" onclick="reverseAnimation(); playAudio()">
+      <img class="logojk" src="logo/img/logo.png" alt="JavisKids Logo" />
+    </div>
+    <h3 id="title">JavisKids</h3>
   </div>
-  <h3 id="title">JavisKids</h3>
   <audio id="audioElement" preload="auto">
     <source src="logo/audio/logo.mp3" type="audio/mpeg">
   </audio>
@@ -19,6 +22,8 @@
       &copy; 2025 JavisKids, All rights reserved. <br> Founder: Yulia Vesga
     </p>    
   </footer>
+</body>
+
   <script>
     function playAudio() {
       var audio = document.getElementById("audioElement");
