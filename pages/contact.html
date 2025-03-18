@@ -18,9 +18,11 @@
             padding: 0;
             background-color: #041424;
              width: 100%;
-            height: 100vh
-            overflow: hidden;
+/*             height: 100vh; */
             font-family: monospace;
+            overflow: hidden;
+            min-height: 100vh;
+            height: auto;
         }
 
         /* Navbar */
@@ -243,25 +245,26 @@ form {
       <button onclick="changeLanguage('en')">EN - English</button>
       <button onclick="changeLanguage('fr')">FR - Français</button>
       <button onclick="changeLanguage('de')">DE - Deutsch</button>
+      <button onclick="changeLanguage('ru')">RU - Ruso</button>
     </div>
   </div>
     </nav>
   </header>
-    <h1>Contact</h1>
+    <h1 id="title">Contact</h1>
     <form id="contactForm">
-        <label for="name">Name:</label>
+        <label id="labes_name" for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="last">Last:</label>
+        <label id="labes_last" for="last">Last:</label>
         <input type="text" id="last" name="last" required>
 
-        <label for="email">Email:</label>
+        <label id="labes_email" for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="message">Message:</label>
+        <label id="labes_msg" for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button type="button" onclick="enviarFormulario()">Send</button>
+        <button id="btto" type="button" onclick="enviarFormulario()">Send</button>
     </form>
 
     <script>
@@ -280,5 +283,61 @@ form {
             }
         }
     </script>
+
+    <script>
+  // Funcionalidad JavaScript
+
+  const translations = {
+    en: {
+      title: "Contact",
+      labes_name: "Name",
+      labes_last: "Last",
+      labes_email: "Email",
+      labes_msg: "Message",
+      btto: "¡Send!",
+    },
+    es: {
+      title: "Contacto",
+      labes_name: "Nombre",
+      labes_last: "Apellido",
+      labes_email: "Correo",
+      labes_msg: "Mensaje",
+      btto: "Enviar",
+    },
+    fr: {
+      title: "Contact",
+      labes_name: "Nom",
+      labes_last: "Prénom",
+      labes_email: "Email",
+      labes_msg: "Message",
+      btto: "Envoyer",
+    },
+    de: {
+      title: "Kontakt",
+      labes_name: "Name",
+      labes_last: "Nachname",
+      labes_email: "Email",
+      labes_msg: "Nachricht",
+      btto: "Senden",
+    },
+    ru: {
+      title: "Контакт",
+      labes_name: "Имя",
+      labes_last: "Фамилия",
+      labes_email: "Электронная почта",
+      labes_msg: "Сообщение",
+      btto: "Отправить",
+    }
+  };
+
+  function changeLanguage(lang) {
+    document.getElementById('title').innerText = translations[lang].title;
+    document.getElementById('labes_name').innerText = translations[lang].labes_name;
+    document.getElementById('labes_last').innerText = translations[lang].labes_last;
+    document.getElementById('labes_email').innerText = translations[lang].labes_email;
+    document.getElementById('labes_msg').innerText = translations[lang].labes_msg;
+    document.getElementById('btto').innerText = translations[lang].btto;
+  }
+</script>
 </body>
 </html>
