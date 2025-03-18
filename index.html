@@ -22,30 +22,30 @@
     </p>    
   </footer>
   <script>
-    function playAudio() {
-      var audio = document.getElementById("audioElement");
-      audio.play();
-      startAnimation();
-    }
+function playAudio() {
+    var audio = document.getElementById("audioElement");
+    audio.play(); // Reproducir el audio
+    startAnimation(); // Iniciar la animación de desvanecimiento
+}
 
- function startAnimation() {
+function startAnimation() {
     var logo = document.querySelector(".logo");
     var h3 = document.querySelector("#title");
     var footer = document.querySelector(".footer");
-    
-    // Eliminar cualquier clase previa de animación inversa
-    logo.classList.remove("reverse-animate-logo", "fade-out");
-    h3.classList.remove("reverse-animate-#title", "fade-out");
-    footer.classList.remove("fade-out");
 
-    // Forzar el reflow para reiniciar la animación
+    // Reiniciar clases previas
+    logo.classList.remove("reverse-animate-logo", "fade-out");
+    h3.classList.remove("reverse-animate-title", "fade-out");
+    footer.classList.remove("reverse-animate-footer", "fade-out");
+
+    // Forzar reflow para reiniciar la animación
     void logo.offsetWidth;
     void h3.offsetWidth;
     void footer.offsetWidth;
 
-    // Agregar las clases para iniciar la animación normal
+    // Agregar clases de animación
     logo.classList.add("animate-logo");
-    h3.classList.add("animate-h#title");
+    h3.classList.add("animate-title");
     footer.classList.add("animate-footer");
 }
 
@@ -53,22 +53,23 @@ function reverseAnimation() {
     var logo = document.querySelector(".logo");
     var h3 = document.querySelector("#title");
     var footer = document.querySelector(".footer");
-    
-    // Eliminar cualquier clase previa de animación normal
-    logo.classList.remove("animate-logo", "fade-out");
-    h3.classList.remove("animate-#title", "fade-out");
-    footer.classList.remove("fade-out");
 
-    // Forzar el reflow para reiniciar la animación
+    // Reiniciar clases previas
+    logo.classList.remove("animate-logo", "fade-out");
+    h3.classList.remove("animate-title", "fade-out");
+    footer.classList.remove("animate-footer", "fade-out");
+
+    // Forzar reflow para reiniciar la animación
     void logo.offsetWidth;
     void h3.offsetWidth;
     void footer.offsetWidth;
 
-    // Agregar las clases para iniciar la animación inversa
+    // Agregar clases de animación inversa
     logo.classList.add("reverse-animate-logo");
-    h3.classList.add("reverse-animate-#title");
+    h3.classList.add("reverse-animate-title");
     footer.classList.add("reverse-animate-footer");
 }
+
 
 
       // Agregar las clases para la animación inversa
