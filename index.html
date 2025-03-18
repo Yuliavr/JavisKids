@@ -30,7 +30,7 @@ function playAudio() {
 
 function startAnimation() {
     var logo = document.querySelector(".logo");
-    var h3 = document.querySelector("#title");
+    var h3 = document.querySelector("title");
     var footer = document.querySelector(".footer");
 
     // Reiniciar clases previas
@@ -51,7 +51,7 @@ function startAnimation() {
 
 function reverseAnimation() {
     var logo = document.querySelector(".logo");
-    var h3 = document.querySelector("#title");
+    var h3 = document.querySelector("title");
     var footer = document.querySelector(".footer");
 
     // Reiniciar clases previas
@@ -74,7 +74,7 @@ function reverseAnimation() {
 
       // Agregar las clases para la animación inversa
       logo.classList.add("reverse-animate-logo");
-      h3.classList.add("reverse-animate-#title");
+      h3.classList.add("reverse-animate-title");
 
       // Escuchar el final de la animación inversa para ocultar los elementos
       logo.addEventListener("animationend", fadeOutElements);
@@ -84,7 +84,7 @@ function reverseAnimation() {
 
     function fadeOutElements() {
       var logo = document.querySelector(".logo");
-      var h3 = document.querySelector("#title");
+      var h3 = document.querySelector("title");
       var footer = document.querySelector(".footer");
       
       // Añadir clase para el desvanecimiento
@@ -100,7 +100,7 @@ function reverseAnimation() {
 
     function hideElements() {
       var logo = document.querySelector(".logo");
-      var h3 = document.querySelector("#title");
+      var h3 = document.querySelector("title");
       var footer = document.querySelector(".footer");
 
 
