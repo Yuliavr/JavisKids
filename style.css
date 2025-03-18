@@ -1,1067 +1,331 @@
 /*Estilos de la pagina index  */
-html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden; /* Evita las barras de desplazamiento */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #041424;
-    }
-  
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #041424;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;;
+    overflow: hidden; /* Evita las barras de desplazamiento */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #041424;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+  }
 
-    .fade-out {
-      opacity: 0;
-      transition: opacity 2s;
-      transition-delay: 0.5s; /* Agregado un pequeño retraso */
+  .fade-out {
+    opacity: 0;
+    transition: opacity 2s;
+    transition-delay: 0.5s; /* Agregado un pequeño retraso */
+  }
+
+
+  .logo {
+    cursor: pointer;
+  }
+
+  .logojk {
+    position: relative;
+    width: 500px;
+    height: 520px;
+    overflow: hidden;
+    transform: scale(0.8);
+  }
+
+  .logojk img {
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .logo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    height: 120px;
+    /* background: #000; */
+    z-index: 2;
+  }
+
+  .logo::after, h3::before, .footer-text::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #041424, #041424);
+    z-index: 3;
+    animation: animate 2s linear forwards;
+  }
+
+  @keyframes animate {
+    0% {
+      right: 0%;
     }
-  
-    .logo {
-      cursor: pointer;
+    100% {
+      right: -400%;
     }
-  
+  }
+
+  @keyframes reverse-animate {
+    0% {
+      left: 0%;
+    }
+    100% {
+      left: -400%;
+    }
+  }
+
+  .animate-logo::after, .animate-h3::before, .footer-text::before {
+    animation: animate 4s linear forwards;
+  }
+
+  .reverse-animate-logo::after, .reverse-animate-h3::before, .footer-text::before{
+    animation: reverse-animate 4s linear forwards;
+  }
+
+  h3 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: monospace;
+    color: #fff;
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 25px;
+    overflow: hidden;
+    margin-top: -50px;
+  }
+
+  .footer {
+    height: auto;
+    max-height: 100px; /* Ajusta según sea necesario */
+  }
+
+  .footer-text {
+    margin: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: monospace;
+    font-size: 12px; /* Tamaño pequeño */
+    text-transform: uppercase;
+    letter-spacing: 5px; /* Ajuste del espaciado de letras */
+    overflow: hidden;
+    text-decoration: none;
+    margin-top: 20px; /* Ajuste del margen superior */
+  }
+
+  .footer-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #041424, transparent, transparent);
+    z-index: 3;
+    animation: reverse-animate 2s linear forwards;
+  }
+
+  /* Media queries para dispositivos móviles */
+  @media (max-width: 600px) {
     .logojk {
-      position: relative;
-      width: 500px;
-      height: 520px;
-      overflow: hidden;
-      transform: scale(0.8);
+      width: 300px;
+      height: 320px;
     }
-  
-    .logojk img {
-      position: absolute;
-      top: 0;
-      height: auto;
-      width: 100%;
-    }
-
-    .logo::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -30px;
-      width: 100%;
-      height: 120px;
-      /* background: #000; */
-      z-index: 2;
-    }
-  
-    .logo::after, h3::before, .footer-text::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 400%;
-      height: 100%;
-      background: linear-gradient(to right, transparent, #041424, #041424);
-      z-index: 3;
-      animation: animate 2s linear forwards;
-    }
-  
-    @keyframes animate {
-      0% {
-        right: 0%;
-      }
-      100% {
-        right: -400%;
-      }
-    }
-  
-    @keyframes reverse-animate {
-      0% {
-        left: 0%;
-      }
-      100% {
-        left: -400%;
-      }
-    }
-  
-    .animate-logo::after, .animate-h3::before, .footer-text::before {
-      animation: animate 4s linear forwards;
-    }
-  
-    .reverse-animate-logo::after, .reverse-animate-h3::before, .footer-text::before{
-      animation: reverse-animate 4s linear forwards;
-    }
-  
-    .fade-out {
-      opacity: 0;
-      transition: opacity 2s;
-    }
-
-  
+    
     h3 {
-      position: relative;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      font-family: monospace;
-      color: #fff;
-      font-size: 70px;
-      text-transform: uppercase;
-      letter-spacing: 25px;
-      overflow: hidden;
-      margin-top: -50px;
+      font-size: 40px;
+      letter-spacing: 10px;
     }
-
-    .footer {
-  height: auto;
-  max-height: 100px; /* Ajusta según sea necesario */
-}
-  
+    
     .footer-text {
-      margin: 0;
-      width: 100%;
-      height: auto;
-      color: #fff;
-      text-align: center;
-      font-family: monospace;
-      font-size: 12px; /* Tamaño pequeño */
-      text-transform: uppercase;
-      letter-spacing: 5px; /* Ajuste del espaciado de letras */
-      overflow: hidden;
-      text-decoration: none;
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-top: 10px; /* Ajuste del margen superior */
+    }
+  }
+
+  /* Media queries para tablets */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .logojk {
+      width: 400px;
+      height: 420px;
+    }
+    
+    h3 {
+      font-size: 50px;
+      letter-spacing: 15px;
+    }
+    
+    .footer-text {
+      font-size: 11px;
+      letter-spacing: 3px;
       margin-top: 20px; /* Ajuste del margen superior */
     }
+  }
 
-    .footer-text::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, #041424, transparent, transparent);
-      z-index: 3;
-      animation: reverse-animate 2s linear forwards;
-    }
-
-    /* Media queries para dispositivos móviles */
-    @media (max-width: 600px) {
-      .logojk {
-        width: 300px;
-        height: 320px;
-      }
-      
-      h3 {
-        font-size: 40px;
-        letter-spacing: 10px;
-      }
-      
-      .footer-text {
-        font-size: 10px;
-        letter-spacing: 2px;
-        margin-top: 10px; /* Ajuste del margen superior */
-      }
-    }
-
-    /* Media queries para tablets */
-    @media (min-width: 601px) and (max-width: 1024px) {
-      .logojk {
-        width: 400px;
-        height: 420px;
-      }
-      
-      h3 {
-        font-size: 50px;
-        letter-spacing: 15px;
-      }
-      
-      .footer-text {
-        font-size: 11px;
-        letter-spacing: 3px;
-        margin-top: 20px; /* Ajuste del margen superior */
-      }
-    }
-
-    /* Media queries para portátiles */
-    @media (min-width: 1025px) and (max-width: 1440px) {
-      .logojk {
-        width: 450px;
-        height: 470px;
-      }
-      
-      h3 {
-        font-size: 60px;
-        letter-spacing: 20px;
-      }
-      
-      .footer-text {
-        font-size: 12px;
-        letter-spacing: 4px;
-        margin-top: 20px; /* Ajuste del margen superior */
-      }
-    }
-
-    /* Media queries para pantallas grandes */
-    @media (min-width: 1441px) {
-      .logojk {
-        width: 500px;
-        height: 520px;
-      }
-      
-      h3 {
-        font-size: 70px;
-        letter-spacing: 25px;
-      }
-      
-      .footer-text {
-        font-size: 14px;
-        letter-spacing: 5px;
-        margin-top: 20px; /* Ajuste del margen superior */
-      }
-    }
-
-/* Estilos de la pagina console */
-<style>
-       * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Courier New', Courier, monospace;
-    }
-        /* Estilos CSS */
-        
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #041424;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-        /* Navbar */
-
-    /* Menú fijo, destacando su estética */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-   background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-    .logo {
-      font-size: 25px;
-      text-decoration: none;
-      width: 80px;
-      height: 80px;
-      /* margin-left: auto; */ /* Empuja los íconos hacia la izquierda del navbar */
-      /* cursor:default;
-     animation:slideRight 1s ease forwards; */
-     /* color:#0ef; */
-     /* border:3px solid #0ef; */
-    }
-
-    .navbar .logo:hover {
-       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-       border-radius: 8px;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: flex-end; /* Alinea los íconos a la derecha */
-      align-items: center; /* Alinea los iconos verticalmente */
-      /* padding: 10px; */ /* Ajusta el espaciado interno del navbar */
-      gap: 15px;  /* Espaciado uniforme entre los íconos */
-    }
-
-    .navbar img {
-      /* font-size:15px; */
-      color: #ffff;
-      text-decoration: none;
-      /* font-weight:500; */ /* poner letras negritas */
-      width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
-      height: 46px; /* Usa las mismas proporciones del ícono del globo */
-      /* margin: 0 10px; /* Espaciado entre íconos */ 
-      margin-right: 0px; /* Mueve el logo completamente a la izquierda */
-      padding: 4px; /* Asegura que no sea demasiado grande */
-      /* filter: brightness(1.8); */ /* Mejora su visibilidad */
+  /* Media queries para portátiles */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .logojk {
+      width: 450px;
+      height: 470px;
     }
     
-
-    /*cambia color al nav*/
-    .navbar img:hover {
-       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-       border-radius: 8px;
-    }
-
-    img.ative {
-      height: 36px;
-    } 
-
-     img.contact {
-      width: 50px;
-    } 
-/* 
-    img.dative {
-      width: 44px;
-      height: 48px;
-    }  */
-
-    .language-dropdown {
-  position: relative;
-  margin: 0 auto; /* Mueve el logo completamente a la izquierda */
-      text-align: center; /* Asegura que esté alineado */
-
-    }
-
-  .dropdown-button {
-  background-color: transparent;
-  /*color: white; */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 34px; /* Hace el ícono más grande */
-  padding: 0px; /* Asegura que no sea demasiado grande */
-    }
-
-.dropdown-button:hover {
-   background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-   border-radius: 8px;
-  
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-    color: white; /* Cambia el color del texto a blanco */
-  /* background-color: #182739; */
-  min-width: 120px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 8px; 
-  z-index: 1;
-  margin-left: -25px; /* Mueve el logo completamente a la izquierda */
-}
-
-.dropdown-content button {
- background-color: transparent; /* Fondo transparente para los botones */
-    color: white; /* Texto blanco */
-    border: none;
-  text-align: left;
-  padding: 10px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.dropdown-content button:hover {
-  background-color: #182739; 
-  
-}
-
-.language-dropdown:hover .dropdown-content {
-  display: block; 
-  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
-  color: white; /* Asegura que las letras sigan siendo blancas */
-}
-        
-    
-
-    h1 {
-      font-size: 72px;
-      color: #0ef;
-      text-shadow: 0 0 0px #0ef;
-      text-transform: uppercase;
-    }
-  </style>
-/* Estilos de la pagina home */
- <style>
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #041424;
-      color: #ffff;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Navbar */
-
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 20px 10%;
-      background: transparent;
-      display: flex;
-      justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
-      align-items: center;
-      z-index: 100;
-    }
-
-    .logo {
-      font-size: 25px;
-      text-decoration: none;
-      width: 80px;
-      height: 80px;
-      margin-left: 0px; /* Mueve el logo completamente a la izquierda */
-      /* cursor:default;
-     animation:slideRight 1s ease forwards; */
-     /* color:#0ef; */
-     /* border:3px solid #0ef; */
-    }
-
-    .navbar .logo:hover {
-       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-       border-radius: 8px;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: flex-end; /* Alinea los íconos a la derecha */
-      align-items: center; /* Alinea los iconos verticalmente */
-      gap: 15px; /* Espaciado uniforme entre los íconos */
-    }
-
-    .navbar img {
-      /* font-size:15px; */
-      color: #ffff;
-      text-decoration: none;
-      /* font-weight:500; */ /* poner letras negritas */
-      width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
-      height: 46px; /* Usa las mismas proporciones del ícono del globo */
-      /* margin: 0 10px; /* Espaciado entre íconos */ 
-      margin-right: 0px; /* Mueve el logo completamente a la izquierda */
-      padding: 4px; /* Asegura que no sea demasiado grande */
-    }
-    
-
-    /*cambia color al nav*/
-    .navbar img:hover {
-       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-       border-radius: 8px;
-    }
-
-    img.ative {
-      height: 36px;
-    } 
-
-     img.contact {
-      width: 50px;
-    } 
-/* 
-    img.dative {
-      width: 44px;
-      height: 48px;
-    }  */
-
-    .language-dropdown {
-  position: relative;
-  margin: 0 auto; /* Mueve el logo completamente a la izquierda */
-      text-align: center; /* Asegura que esté alineado */
-
-    }
-
-  .dropdown-button {
-  background-color: transparent;
-  /*color: white; */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 34px; /* Hace el ícono más grande */
-  padding: 0px; /* Asegura que no sea demasiado grande */
-    }
-
-.dropdown-button:hover {
-   background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-   border-radius: 8px;
-  
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-    color: white; /* Cambia el color del texto a blanco */
-  /* background-color: #182739; */
-  min-width: 120px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 8px; 
-  z-index: 1;
-  margin-left: -25px; /* Mueve el logo completamente a la izquierda */
-}
-
-.dropdown-content button {
- background-color: transparent; /* Fondo transparente para los botones */
-    color: white; /* Texto blanco */
-    border: none;
-  text-align: left;
-  padding: 10px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.dropdown-content button:hover {
-  background-color: #182739; 
-  
-}
-
-.language-dropdown:hover .dropdown-content {
-  display: block; 
-  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
-  color: white; /* Asegura que las letras sigan siendo blancas */
-}
-
-
-/* Secciones */
-.section {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 10%;
-    }
-
-    /* Ajustes en el CSS */
-    .home {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center; /* Centra horizontalmente */
-      align-items: center; /* Centra verticalmente */
-    }
-
-    .home-content {
-      text-align: center; /* Asegura que el contenido esté alineado al centro */
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      max-width: 90%;
-}
-
-    .home-content p {
-    margin-bottom: 15px; /* Espaciado uniforme entre párrafos */
-}
-
-    #title {
-      font-size: 80px;
-      color: #295a87;
-      margin: 20px 0;
-      width: auto; /* Quita el ancho del 180% */
-      font-family: monospace;
-      text-align: center; /* Texto centrado */
-    }
-
-  #description {
-    /*width: auto;*/ /* Ajusta automáticamente el ancho */
-    max-width: 1000px; /* Limita el ancho del texto */
-    margin: 0 auto; /* Centra el contenido */
-    text-align: center; /* Texto centrado */
-    font-size: 25px; /* Tamaño más consistente para móviles y escritorio */
-    color: #647381;
-    font-family: monospace;
-    overflow-wrap: break-word;
-    line-height: 1.5; /* Espaciado cómodo entre líneas */
-    word-wrap: break-word; /* Permite que las palabras largas se dividan */
-    }
-
-    /* .home-content p:nth-of-type(2){
-  margin-bottom: 30px;
-} */
-
-    p {
-    margin-bottom: 15px; /* Espaciado más compacto para párrafos */
-}
-    .icon-img {
-      margin-left: 180px;
-    }
-
-    .ho-img {
-      width: 600px;
-      height: 400px;
-      border-radius: 4%;
-      box-shadow: 0 0 3px #0ef;
-    }
-
-
-
-    .btns {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: monospace;
-      margin: 10px 0; /* Reduce el espacio entre botones y otros elementos */
-
-    }
-
-    .btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 12px 28px;
-      /* background: #0c141e; */
-      background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-      border-radius: 40px;
-      font-size: 20px;
-      color: #295a87;
-      letter-spacing: 1px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 30px 0;
-      text-align: center;
-      cursor: pointer;
-      font-family: monospace;
-    }
-
-    .btn:hover{
-      box-shadow: 0 0 8px rgb(0, 238, 255, 0.2);
-    }
-
-    /*KEYFRAMES ANIMATION*/
-    @keyframes SlideRight {
-      0% {
-        transform: traslateX(100px);
-        opacity: 0;
-      }
-
-      100% {
-        transform: traslateX(0);
-        opacity: 1;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
     h3 {
-        font-size: 20px; /* Tamaño reducido para pantallas pequeñas */
-      
-    }
-
-    p {
-        font-size: 12px; /* Reduce el tamaño del párrafo */
-        line-height: 1.4; /* Ajusta el espaciado entre líneas */
-    }
-
-    .btn {
-        font-size: 14px; /* Tamaño del texto del botón */
-        padding: 10px 20px; /* Botón más compacto */
-    }
-}
-  </style>
-/* Estilos de la pagina shop */
- <style>
-       * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Courier New', Courier, monospace;
-    }
-        /* Estilos CSS */
-        
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #041424;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-        /* Navbar */
-
-    /* Menú fijo, destacando su estética */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-   background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-    .logo {
-      font-size: 25px;
-      text-decoration: none;
-      width: 80px;
-      height: 80px;
-      /* margin-left: auto; */ /* Empuja los íconos hacia la izquierda del navbar */
-      /* cursor:default;
-     animation:slideRight 1s ease forwards; */
-     /* color:#0ef; */
-     /* border:3px solid #0ef; */
-    }
-
-    .navbar .logo:hover {
-       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-       border-radius: 8px;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: flex-end; /* Alinea los íconos a la derecha */
-      align-items: center; /* Alinea los iconos verticalmente */
-      /* padding: 10px; */ /* Ajusta el espaciado interno del navbar */
-      gap: 15px;  /* Espaciado uniforme entre los íconos */
-    }
-
-    .navbar img {
-      /* font-size:15px; */
-      color: #ffff;
-      text-decoration: none;
-      /* font-weight:500; */ /* poner letras negritas */
-      width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
-      height: 46px; /* Usa las mismas proporciones del ícono del globo */
-      /* margin: 0 10px; /* Espaciado entre íconos */ 
-      margin-right: 0px; /* Mueve el logo completamente a la izquierda */
-      padding: 4px; /* Asegura que no sea demasiado grande */
-      /* filter: brightness(1.8); */ /* Mejora su visibilidad */
+      font-size: 60px;
+      letter-spacing: 20px;
     }
     
-
-    /*cambia color al nav*/
-    .navbar img:hover {
-       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-       border-radius: 8px;
+    .footer-text {
+      font-size: 12px;
+      letter-spacing: 4px;
+      margin-top: 20px; /* Ajuste del margen superior */
     }
+  }
 
-    img.ative {
-      height: 36px;
-    } 
-
-     img.contact {
-      width: 50px;
-    } 
-/* 
-    img.dative {
-      width: 44px;
-      height: 48px;
-    }  */
-
-    .language-dropdown {
-  position: relative;
-  margin: 0 auto; /* Mueve el logo completamente a la izquierda */
-      text-align: center; /* Asegura que esté alineado */
-
+  /* Media queries para pantallas grandes */
+  @media (min-width: 1441px) {
+    .logojk {
+      width: 500px;
+      height: 520px;
     }
-
-  .dropdown-button {
-  background-color: transparent;
-  /*color: white; */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 34px; /* Hace el ícono más grande */
-  padding: 0px; /* Asegura que no sea demasiado grande */
-    }
-
-.dropdown-button:hover {
-   background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-   border-radius: 8px;
-  
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-    color: white; /* Cambia el color del texto a blanco */
-  /* background-color: #182739; */
-  min-width: 120px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 8px; 
-  z-index: 1;
-  margin-left: -25px; /* Mueve el logo completamente a la izquierda */
-}
-
-.dropdown-content button {
- background-color: transparent; /* Fondo transparente para los botones */
-    color: white; /* Texto blanco */
-    border: none;
-  text-align: left;
-  padding: 10px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.dropdown-content button:hover {
-  background-color: #182739; 
-  
-}
-
-.language-dropdown:hover .dropdown-content {
-  display: block; 
-  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
-  color: white; /* Asegura que las letras sigan siendo blancas */
-}
-        
     
-
-    h1 {
-      font-size: 72px;
-      color: #0ef;
-      text-shadow: 0 0 0px #0ef;
-      text-transform: uppercase;
+    h3 {
+      font-size: 70px;
+      letter-spacing: 25px;
     }
-  </style>
-/* Estilos de la pagina contacto */
-
- <style>
-
-         * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+    
+    .footer-text {
+      font-size: 14px;
+      letter-spacing: 5px;
+      margin-top: 20px; /* Ajuste del margen superior */
     }
-        /* Estilos CSS */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #041424;
-             width: 100%;
-            height: 100%;
-             overflow: hidden;
-        }
-       
-h1 {
-    text-align: center;
-    color: #295a87;
-    margin-top: 120px; /* Añade un margen superior para evitar la superposición */
-    font-size: 36px; /* Ajusta el tamaño si es necesario */
-    overflow: hidden;
-}
+  }
 
-        /* Ajusta la posición del formulario para que esté más abajo */
-form {
-    max-width: 400px;
-    margin: 30px auto; /* Esto asegura que el formulario esté centrado con más espacio desde el menú */
-    padding: 10px;
-    background-color: #1c3349;
-    box-shadow: 0 0 5px #0ef;
-    border-radius: 8px;
-    color: #fff;
-    overflow: hidden;
-}
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        input, textarea, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        textarea {
-            height: 150px; /* Haciendo el cuadro más alto */
-             overflow: hidden;
-        }
-
-        button {
-            /* background-color: #007bff; */
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            background-color: #0c141e;
-
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 /* Estilos de la pagina navbar */
 
-<style>
-         * {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      box-sizing: border-box;
-    }
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
+    align-items: center;
+    z-index: 100; 
+  
+}
 
-    body {
-      background-color: #041424;
-      color: #ffff;
-      width: 100%;
-      height: 100%;
-    }
+.logo {
+    font-size: 25px;
+    text-decoration: none;
+    width: 80px;
+    height: 80px;
+    margin-left: 0px; /* Mueve el logo completamente a la izquierda */
+}
 
-    /* Navbar */
+.logo img:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
 
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 20px 10%;
-      background: transparent;
-      display: flex;
-      justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
-      align-items: center;
-      z-index: 100;
-    }
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Alinea los íconos a la derecha */
+    align-items: center; /* Alinea los iconos verticalmente */
+    gap: 15px; /* Espaciado uniforme entre los íconos */
+    /* padding: 10px; */ /* Ajusta el espaciado interno del navbar */
+}
 
-    .logo {
-      font-size: 25px;
-      text-decoration: none;
-      width: 80px;
-      height: 80px;
-      margin-left: 0px; /* Mueve el logo completamente a la izquierda */
-      /* cursor:default;
-     animation:slideRight 1s ease forwards; */
-     /* color:#0ef; */
-     /* border:3px solid #0ef; */
-    }
+.navbar img {
+    text-decoration: none;
+    width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
+    height: 46px; /* Usa las mismas proporciones del ícono del globo */
+    margin-right: 0px; /* Mueve el logo completamente a la izquierda */
+    padding: 4px; /* Asegura que no sea demasiado grande */
+        /* font-size:15px; */
+    /* font-weight:500; */ /* poner letras negritas */
+     /* margin: 0 10px; /* Espaciado entre íconos */ 
+     /* filter: brightness(1.8); */ /* Mejora su visibilidad */  
+}
 
-    .navbar .logo:hover {
-       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-       border-radius: 8px;
-    }
+img.ative {
+    height: 36px;
+} 
 
-    .navbar {
-      display: flex;
-      justify-content: flex-end; /* Alinea los íconos a la derecha */
-      align-items: center; /* Alinea los iconos verticalmente */
-      gap: 15px; /* Espaciado uniforme entre los íconos */
-    }
+img.contact {
+    width: 50px;
+} 
 
-    .navbar img {
-      /* font-size:15px; */
-      color: #ffff;
-      text-decoration: none;
-      /* font-weight:500; */ /* poner letras negritas */
-      width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
-      height: 46px; /* Usa las mismas proporciones del ícono del globo */
-      /* margin: 0 10px; /* Espaciado entre íconos */ 
-      margin-right: 0px; /* Mueve el logo completamente a la izquierda */
-      padding: 4px; /* Asegura que no sea demasiado grande */
-    }
-    
+.language-dropdown {
+    position: relative;
+    margin: 0 auto; /* Mueve el logo completamente a la izquierda */
+    text-align: center; /* Asegura que esté alineado */
+}
 
-    /*cambia color al nav*/
-    .navbar img:hover {
-       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-       border-radius: 8px;
-    }
-
-    img.ative {
-      height: 36px;
-    } 
-
-     img.contact {
-      width: 50px;
-    } 
-/* 
-    img.dative {
-      width: 44px;
-      height: 48px;
-    }  */
-
-    .language-dropdown {
-  position: relative;
-  margin: 0 auto; /* Mueve el logo completamente a la izquierda */
-      text-align: center; /* Asegura que esté alineado */
-
-    }
-
-  .dropdown-button {
-  background-color: transparent;
-  /*color: white; */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 34px; /* Hace el ícono más grande */
-  padding: 0px; /* Asegura que no sea demasiado grande */
-    }
+.dropdown-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 34px; /* Hace el ícono más grande */
+    padding: 0px; /* Asegura que no sea demasiado grande */
+}
 
 .dropdown-button:hover {
-   background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-   border-radius: 8px;
-  
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+   
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-    color: white; /* Cambia el color del texto a blanco */
-  /* background-color: #182739; */
-  min-width: 120px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 8px; 
-  z-index: 1;
-  margin-left: -25px; /* Mueve el logo completamente a la izquierda */
+    display: none;
+    position: absolute;
+    min-width: 120px;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    color: white; /* Cambia el color del texto a blanco */ 
+    border-radius: 8px; 
+    z-index: 1;
+    margin-left: -25px; /* Mueve el logo completamente a la izquierda */
+     /* background-color: #182739; */
 }
 
 .dropdown-content button {
- background-color: transparent; /* Fondo transparente para los botones */
+    background-color: transparent; /* Fondo transparente para los botones */
     color: white; /* Texto blanco */
     border: none;
-  text-align: left;
-  padding: 10px;
-  cursor: pointer;
-  width: 100%;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
 }
 
 .dropdown-content button:hover {
-  background-color: #182739; 
-  
+    background-color: #182739; 
 }
 
 .language-dropdown:hover .dropdown-content {
-  display: block; 
-  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
-  color: white; /* Asegura que las letras sigan siendo blancas */
+    display: block; 
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
+    color: white; /* Asegura que las letras sigan siendo blancas */
 }
 
-    </style>
+/* Fin Navbar */
+
+
+
+/* Estilos de la pagina console */
