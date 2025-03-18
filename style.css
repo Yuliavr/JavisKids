@@ -118,7 +118,7 @@ body {
     letter-spacing: 5px; /* Ajuste del espaciado de letras */
     overflow: hidden;
     text-decoration: none;
-    margin-top: 20px; /* Ajuste del margen superior */
+    /* margin-top: 20px; /* Ajuste del margen superior */ 
   }
 
   .footer-text::before {
