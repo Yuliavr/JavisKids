@@ -1,4 +1,5 @@
- html, body {
+/*Estilos de la pagina index  */
+html, body {
       margin: 0;
       padding: 0;
       width: 100%;
@@ -223,3 +224,8 @@
         margin-top: 20px; /* Ajuste del margen superior */
       }
     }
+
+/* Estilos de la pagina console */
+/* Estilos de la pagina home */
+/* Estilos de la pagina shop */
+/* Estilos de la pagina contacto */
