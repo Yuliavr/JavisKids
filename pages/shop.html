@@ -199,6 +199,32 @@
     </nav>
   </header>
   <h1>¡Soon!</h1>
+
+   <script>
+  // Funcionalidad JavaScript
+
+  const translations = {
+    en: {
+      title: "Soon!",
+    },
+    es: {
+      title: "¡Pronto!",
+    },
+    fr: {
+      title: "Bientôt!",
+    },
+    de: {
+      title: "Bald!",
+    },
+    ru: {
+    title: "Скоро!", 
+    }
+  };
+
+  function changeLanguage(lang) {
+    document.getElementById('title').innerText = translations[lang].title;
+  }
+</script>
 </body>
 
 </html>
