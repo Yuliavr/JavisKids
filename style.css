@@ -32,6 +32,8 @@ body {
   /* flex-grow: 1;*/ /* Permite que ocupe espacio flexible entre header y footer */
   /*justify-content: flex-start; *//* Mantén los elementos en la parte superior */
   gap: 10px; /* Ajusta la separación entre el logo y el título */
+  width: auto; /* Ajusta el ancho al contenido */
+  max-width: 90%; /* Limita al 90% del ancho del viewport */
   height: 80vh; /* Considera la altura total menos la del footer */
 }
 
@@ -46,8 +48,10 @@ body {
 }
 
 .footer {
-  width: 100%;
+  display: inline-block; /* Ocupa solo el tamaño del contenido */
   text-align: center;
+  width: auto;
+  max-width: 80%; /* Limita el ancho máximo al 80% del contenedor */
   color: white;
   font-size: 12px;
   background: transparent;
@@ -57,14 +61,13 @@ body {
 
 .footer-text {
   margin: 0 auto;
-  width: 100%;
+  padding: 0;
   color: #fff;
   text-align: center;
   font-family: monospace;
   font-size: 12px; /* Tamaño pequeño */
   text-transform: uppercase;
   letter-spacing: 5px; /* Ajuste del espaciado de letras */
-  overflow: hidden;
   text-decoration: none;
   /* margin-top: 20px; /* Ajuste del margen superior */ 
 }
