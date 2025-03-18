@@ -35,7 +35,7 @@
     
     // Eliminar cualquier clase previa de animación inversa
     logo.classList.remove("reverse-animate-logo", "fade-out");
-    h3.classList.remove("reverse-animate-h3", "fade-out");
+    h3.classList.remove("reverse-animate-#title", "fade-out");
     footer.classList.remove("fade-out");
 
     // Forzar el reflow para reiniciar la animación
@@ -45,7 +45,7 @@
 
     // Agregar las clases para iniciar la animación normal
     logo.classList.add("animate-logo");
-    h3.classList.add("animate-h3");
+    h3.classList.add("animate-h#title");
     footer.classList.add("animate-footer");
 }
 
@@ -56,7 +56,7 @@ function reverseAnimation() {
     
     // Eliminar cualquier clase previa de animación normal
     logo.classList.remove("animate-logo", "fade-out");
-    h3.classList.remove("animate-h3", "fade-out");
+    h3.classList.remove("animate-#title", "fade-out");
     footer.classList.remove("fade-out");
 
     // Forzar el reflow para reiniciar la animación
@@ -66,14 +66,14 @@ function reverseAnimation() {
 
     // Agregar las clases para iniciar la animación inversa
     logo.classList.add("reverse-animate-logo");
-    h3.classList.add("reverse-animate-h3");
+    h3.classList.add("reverse-animate-#title");
     footer.classList.add("reverse-animate-footer");
 }
 
 
       // Agregar las clases para la animación inversa
       logo.classList.add("reverse-animate-logo");
-      h3.classList.add("reverse-animate-h3");
+      h3.classList.add("reverse-animate-#title");
 
       // Escuchar el final de la animación inversa para ocultar los elementos
       logo.addEventListener("animationend", fadeOutElements);
@@ -83,7 +83,7 @@ function reverseAnimation() {
 
     function fadeOutElements() {
       var logo = document.querySelector(".logo");
-      var h3 = document.querySelector("h3");
+      var h3 = document.querySelector("#title");
       var footer = document.querySelector(".footer");
       
       // Añadir clase para el desvanecimiento
@@ -99,7 +99,7 @@ function reverseAnimation() {
 
     function hideElements() {
       var logo = document.querySelector(".logo");
-      var h3 = document.querySelector("h3");
+      var h3 = document.querySelector("#title");
       var footer = document.querySelector(".footer");
 
 
