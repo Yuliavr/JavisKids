@@ -14,13 +14,13 @@ body {
     font-family: 'Courier New', Courier, monospace;
   }
 
-  .fade-out {
+.fade-out {
     opacity: 0;
     transition: opacity 2s;
     transition-delay: 0.5s; /* Agregado un pequeño retraso */
   }
 
-  .container {
+.container {
     display: flex;
     flex-direction: column; /* Apila el logo y el título verticalmente */
     align-items: center; /* Centra horizontalmente */
@@ -43,7 +43,7 @@ body {
 }
 
 
-  .logo::before {
+.logo::before {
     content: '';
     position: absolute;
     left: 0;
@@ -54,7 +54,7 @@ body {
     z-index: 2;
   }
 
-  .logo::after, #title::before, .footer-text::before{
+.logo::after, #title::before, .footer-text::before{
     content: '';
     position: absolute;
     top: 0;
@@ -66,7 +66,7 @@ body {
     animation: animate 2s linear forwards;
   }
 
-  @keyframes animate {
+@keyframes animate {
     0% {
       right: 0%;
     }
@@ -75,7 +75,7 @@ body {
     }
   }
 
-  @keyframes reverse-animate {
+@keyframes reverse-animate {
     0% {
       left: 0%;
     }
@@ -84,15 +84,15 @@ body {
     }
   }
 
-  .animate-logo::after, .animate-#title::before, .footer-text::before {
+.animate-logo::after, .animate-#title::before, .footer-text::before {
     animation: animate 4s linear forwards;
   }
 
-  .reverse-animate-logo::after, .reverse-animate-#title::before, .footer-text::before{
+.reverse-animate-logo::after, .reverse-animate-#title::before, .footer-text::before{
     animation: reverse-animate 4s linear forwards;
   }
 
-  #title {
+#title {
     margin-top: 20px; /* Espaciado entre el logo y el título */
     text-align: center;
     font-family: monospace;
@@ -102,7 +102,7 @@ body {
     letter-spacing: 25px;
 }
 
-  .footer {
+.footer {
     height: auto;
     max-height: 100px; /* Ajusta según sea necesario */
   }
@@ -220,17 +220,18 @@ body {
     background: transparent;
     display: flex;
     justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
-    align-items: center;
-    z-index: 100; 
+    align-items: center;/* Centra verticalmente */
+    z-index: 1000; /* Asegura que esté encima del contenido */
   
 }
 
 .nav_log {
-    font-size: 25px;
-    text-decoration: none;
+    /* font-size: 25px;
+    text-decoration: none; */
     width: 80px;
     height: 80px;
-    margin-left: 0px; /* Mueve el logo completamente a la izquierda */
+    /* margin-left: 0px; */ /* Mueve el logo completamente a la izquierda */
+    object-fit: contain; /* Evita distorsión */
 }
 
 .nav_log:hover {
@@ -241,7 +242,7 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: flex-end; /* Alinea los íconos a la derecha */
+    /* justify-content: flex-end; */ /* Alinea los íconos a la derecha */
     align-items: center; /* Alinea los iconos verticalmente */
     gap: 15px; /* Espaciado uniforme entre los íconos */
     /* padding: 10px; */ /* Ajusta el espaciado interno del navbar */
@@ -253,10 +254,16 @@ body {
     height: 46px; /* Usa las mismas proporciones del ícono del globo */
     margin-right: 0px; /* Mueve el logo completamente a la izquierda */
     padding: 4px; /* Asegura que no sea demasiado grande */
+    cursor: pointer;
+    transition: transform 0.3s; /* Agrega una animación suave */
         /* font-size:15px; */
     /* font-weight:500; */ /* poner letras negritas */
      /* margin: 0 10px; /* Espaciado entre íconos */ 
      /* filter: brightness(1.8); */ /* Mejora su visibilidad */  
+}
+
+.navbar .nav_icon:hover {
+    transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
 }
 
 /* .nav_icon.ative {
@@ -267,10 +274,11 @@ nav_icon.contact {
     width: 50px;
 }  */
 
+/* Dropdown de idioma */
 .language-dropdown {
     position: relative;
-    margin: 0 auto; /* Mueve el logo completamente a la izquierda */
-    text-align: center; /* Asegura que esté alineado */
+    /* margin: 0 auto; */ /* Mueve el logo completamente a la izquierda */
+    /* text-align: center; */ /* Asegura que esté alineado */
 }
 
 .dropdown-button {
@@ -278,9 +286,10 @@ nav_icon.contact {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 34px; /* Hace el ícono más grande */
-    padding: 0px; /* Asegura que no sea demasiado grande */
+    /* padding: 0px; */ /* Asegura que no sea demasiado grande */
+    transition: transform 0.3s;
 }
 
 .dropdown-button:hover {
@@ -293,21 +302,27 @@ nav_icon.contact {
 .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 120px;
+    top: 50px; /* Ajusta la posición debajo del botón */
+    right: 0;
+    /* min-width: 120px; */
     background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     color: white; /* Cambia el color del texto a blanco */ 
     border-radius: 8px; 
-    z-index: 1;
+    /* z-index: 1; */
+    z-index: 1001;
     margin-left: -25px; /* Mueve el logo completamente a la izquierda */
      /* background-color: #182739; */
+     padding: 10px;
 }
 
 .dropdown-content button {
+    display: block;
     background-color: transparent; /* Fondo transparente para los botones */
-    color: white; /* Texto blanco */
+    color: #fff; /* Texto blanco */
     border: none;
     text-align: left;
+    font-size: 14px;
     padding: 10px;
     cursor: pointer;
     width: 100%;
@@ -319,8 +334,24 @@ nav_icon.contact {
 
 .language-dropdown:hover .dropdown-content {
     display: block; 
-    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
-    color: white; /* Asegura que las letras sigan siendo blancas */
+    /* background-color: rgba(255, 255, 255, 0.2); */ /* Efecto hover con fondo blanco y transparencia */
+    /* color: white; */ /* Asegura que las letras sigan siendo blancas */
+}
+
+@media (max-width: 768px) {
+    .nav_log {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar .nav_icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dropdown-button {
+        font-size: 25px;
+    }
 }
 
 /* Fin Navbar */
