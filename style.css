@@ -33,7 +33,7 @@ body {
     transform: scale(0.8);
   }
 
-  .logojk img {
+  .logojk {
     position: absolute;
     top: 0;
     height: auto;
@@ -51,7 +51,7 @@ body {
     z-index: 2;
   }
 
-  .logo::after, h3::before, .footer-text::before{
+  .logo::after, #title::before, .footer-text::before{
     content: '';
     position: absolute;
     top: 0;
@@ -81,15 +81,15 @@ body {
     }
   }
 
-  .animate-logo::after, .animate-h3::before, .footer-text::before {
+  .animate-logo::after, .animate-#title::before, .footer-text::before {
     animation: animate 4s linear forwards;
   }
 
-  .reverse-animate-logo::after, .reverse-animate-h3::before, .footer-text::before{
+  .reverse-animate-logo::after, .reverse-animate-#title::before, .footer-text::before{
     animation: reverse-animate 4s linear forwards;
   }
 
-  h3 {
+  #title {
     position: relative;
     margin: 0;
     padding: 0;
@@ -141,7 +141,7 @@ body {
       height: 320px;
     }
     
-    h3 {
+    #title {
       font-size: 40px;
       letter-spacing: 10px;
     }
@@ -160,7 +160,7 @@ body {
       height: 420px;
     }
     
-    h3 {
+    #title {
       font-size: 50px;
       letter-spacing: 15px;
     }
@@ -179,7 +179,7 @@ body {
       height: 470px;
     }
     
-    h3 {
+    #title {
       font-size: 60px;
       letter-spacing: 20px;
     }
@@ -198,7 +198,7 @@ body {
       height: 520px;
     }
     
-    h3 {
+    #title {
       font-size: 70px;
       letter-spacing: 25px;
     }
@@ -234,7 +234,7 @@ body {
     margin-left: 0px; /* Mueve el logo completamente a la izquierda */
 }
 
-.nav_log img:hover {
+.nav_log:hover {
     background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
