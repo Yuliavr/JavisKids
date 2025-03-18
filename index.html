@@ -28,46 +28,47 @@
       startAnimation();
     }
 
-    function startAnimation() {
-      var logo = document.querySelector(".logo");
-      var h3 = document.querySelector("h3");
-      var footer = document.querySelector(".footer");
-      
-      // Reiniciar la animación
-      logo.classList.remove("animate-logo", "reverse-animate-logo");
-      h3.classList.remove("animate-h3", "reverse-animate-h3");
-      footer.classList.remove("fade-out", "reverse-animate-footer");
+ function startAnimation() {
+    var logo = document.querySelector(".logo");
+    var h3 = document.querySelector("#title");
+    var footer = document.querySelector(".footer");
+    
+    // Eliminar cualquier clase previa de animación inversa
+    logo.classList.remove("reverse-animate-logo", "fade-out");
+    h3.classList.remove("reverse-animate-h3", "fade-out");
+    footer.classList.remove("fade-out");
 
-      
-      // Forzar el reflow para reiniciar la animación
-      void logo.offsetWidth;
-      void h3.offsetWidth;
-      void footer.offsetWidth;
-      
-      // Agregar las clases para iniciar la animación
-      logo.classList.add("fade-out", "animate-logo");
-      h3.classList.add("fade-out", "animate-h3");
-      /* footer.classList.add("fade-out"); */
+    // Forzar el reflow para reiniciar la animación
+    void logo.offsetWidth;
+    void h3.offsetWidth;
+    void footer.offsetWidth;
 
-      // Iniciar el desvanecimiento de los elementos
-    fadeOutElements();
+    // Agregar las clases para iniciar la animación normal
+    logo.classList.add("animate-logo");
+    h3.classList.add("animate-h3");
+    footer.classList.add("animate-footer");
+}
 
-    }
+function reverseAnimation() {
+    var logo = document.querySelector(".logo");
+    var h3 = document.querySelector("#title");
+    var footer = document.querySelector(".footer");
+    
+    // Eliminar cualquier clase previa de animación normal
+    logo.classList.remove("animate-logo", "fade-out");
+    h3.classList.remove("animate-h3", "fade-out");
+    footer.classList.remove("fade-out");
 
-    function reverseAnimation() {
-      var logo = document.querySelector(".logo");
-      var h3 = document.querySelector("h3");
-      var footer = document.querySelector(".footer");
-      
-      // Remover las clases de animación normal
-      logo.classList.remove("animate-logo", "fade-out", "reverse-animate-logo");
-      h3.classList.remove("animate-h3", "fade-out", "reverse-animate-h3");
-      footer.classList.remove("fade-out");
+    // Forzar el reflow para reiniciar la animación
+    void logo.offsetWidth;
+    void h3.offsetWidth;
+    void footer.offsetWidth;
 
-      // Eliminar event listeners previos
-      logo.removeEventListener("animationend", fadeOutElements);
-      h3.removeEventListener("animationend", fadeOutElements);
-      footer.removeEventListener("animationend", fadeOutElements);
+    // Agregar las clases para iniciar la animación inversa
+    logo.classList.add("reverse-animate-logo");
+    h3.classList.add("reverse-animate-h3");
+    footer.classList.add("reverse-animate-footer");
+}
 
 
       // Agregar las clases para la animación inversa
