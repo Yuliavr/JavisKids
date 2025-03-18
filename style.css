@@ -25,7 +25,7 @@ body {
     flex-direction: column; /* Apila logo y texto */
     align-items: center;
     justify-content: center; /* Centra verticalmente el contenido principal */
-    flex-grow: 1; /* Permite que ocupe espacio flexible entre header y footer */
+   /* flex-grow: 1;*/ /* Permite que ocupe espacio flexible entre header y footer */
 }
 
 
