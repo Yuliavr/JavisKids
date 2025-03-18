@@ -3,30 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact_JavisKids</title>
-    <style>
-
-         * {
+    <title>Login_JavisKids</title>
+  <style>
+    /* Archivo: styles.css */
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
              
     }
-        /* Estilos CSS */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #041424;
-             width: 100%;
-            height: 100vh;
-            overflow: hidden;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #041424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: monospace;
+}
+
+        
+h1 {
+    text-align: center;
+    color: #295a87;
+    margin-top: 120px; /* Añade un margen superior para evitar la superposición */
+    font-size: 36px; /* Ajusta el tamaño si es necesario */
+    overflow: hidden;
+    font-family: monospace;
+}
+
+        /* Ajusta la posición del formulario para que esté más abajo */
+form {
+    max-width: 400px;
+    margin: 30px auto; /* Esto asegura que el formulario esté centrado con más espacio desde el menú */
+    padding: 10px;
+    background-color: #1c3349;
+    box-shadow: 0 0 5px #0ef;
+    border-radius: 8px;
+    color: #fff;
+    overflow: hidden;
+    font-family: monospace;
+}
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-family: monospace;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
             font-family: monospace;
         }
 
-        /* Navbar */
+        textarea {
+            height: 150px; /* Haciendo el cuadro más alto */
+             overflow: hidden;
+        }
+
+        button {
+            /* background-color: #007bff; */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            background-color: #0c141e;
+
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+p {
+    margin-top: 15px;
+    color: #666;
+    text-align: center;
+}
+
+a {
+    color: #0ef;
+    text-decoration: none;
+}
+
+/* Navbar */
 
     /* Menú fijo, destacando su estética */
-.header {
+    .header {
     position: fixed;
     top: 0;
     left: 0;
@@ -168,174 +235,62 @@ font-family: monospace;
   background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
   color: white; /* Asegura que las letras sigan siendo blancas */
 }
-        
-h1 {
-    text-align: center;
-    color: #295a87;
-    margin-top: 120px; /* Añade un margen superior para evitar la superposición */
-    font-size: 36px; /* Ajusta el tamaño si es necesario */
-    overflow: hidden;
-    font-family: monospace;
-}
 
-        /* Ajusta la posición del formulario para que esté más abajo */
-form {
-    max-width: 400px;
-    margin: 30px auto; /* Esto asegura que el formulario esté centrado con más espacio desde el menú */
-    padding: 10px;
-    background-color: #1c3349;
-    box-shadow: 0 0 5px #0ef;
-    border-radius: 8px;
-    color: #fff;
-    overflow: hidden;
-    font-family: monospace;
-}
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            font-family: monospace;
-        }
-        input, textarea, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-family: monospace;
-        }
-
-        textarea {
-            height: 150px; /* Haciendo el cuadro más alto */
-             overflow: hidden;
-        }
-
-        button {
-            /* background-color: #007bff; */
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            background-color: #0c141e;
-
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  </style>
 </head>
 <body>
     <header class="header">
-    <a href="../index.html"><img class="logo" src="icons/logobluec.png" alt="logo" /></a>
+        <a href="../index.html"><img class="logo" src="icons/logobluec.png" alt="logo" /></a>
+    
+        <nav class="navbar">
+          <a href="home.html"><img class="homem" src="icons/home.png" alt="home" /></a>
+          <a href="console.html"><img class="dative" src="icons/cmdedi.png" alt="consola" /></a>
+          <a href="contact.html"><img class="contact" src="icons/contact.png" alt="contact" /></img></a>
+          <a href="shop.html"><img class="" src="icons/shop.png"  alt="shop" /></img></a>
+          
+    
+          <!-- Colocamos el idioma justo al lado del carrito -->
+      <div class="language-dropdown">
+        <button class="dropdown-button" aria-label="Selector de idioma">🌍</button>
+        <div class="dropdown-content">
+          <button onclick="changeLanguage('es')">ES - Español</button>
+          <button onclick="changeLanguage('en')">EN - English</button>
+          <button onclick="changeLanguage('fr')">FR - Français</button>
+          <button onclick="changeLanguage('de')">DE - Deutsch</button>
+          <button onclick="changeLanguage('ru')">RU - Ruso</button>
+        </div>
+      </div>
+        </nav>
+      </header>
+    <div class="login-container">
+        <h1>Inicia Sesión</h1>
+        <form id="loginForm">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Introduce tu correo" required>
 
-    <nav class="navbar">
-      <a href="home.html"><img class="homem" src="icons/home.png" alt="home" /></a>
-      <a href="console.html"><img class="dative" src="icons/cmdedi.png" alt="consola" /></a>
-      <a href="contact.html"><img class="contact" src="icons/contact.png" alt="contact" /></img></a>
-      <a href="shop.html"><img class="" src="icons/shop.png"  alt="shop" /></img></a>
-      
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required>
 
-      <!-- Colocamos el idioma justo al lado del carrito -->
-  <div class="language-dropdown">
-    <button class="dropdown-button" aria-label="Selector de idioma">🌍</button>
-    <div class="dropdown-content">
-      <button onclick="changeLanguage('es')">ES - Español</button>
-      <button onclick="changeLanguage('en')">EN - English</button>
-      <button onclick="changeLanguage('fr')">FR - Français</button>
-      <button onclick="changeLanguage('de')">DE - Deutsch</button>
-      <button onclick="changeLanguage('ru')">RU - Ruso</button>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p>¿No tienes una cuenta? <a href="#">Regístrate</a></p>
     </div>
-  </div>
-    </nav>
-  </header>
-    <h1 id="title">Contact</h1>
-    <form id="contactForm">
-        <label id="labes_name" for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label id="labes_last" for="last">Last:</label>
-        <input type="text" id="last" name="last" required>
-
-        <label id="labes_email" for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label id="labes_msg" for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button id="btto" type="button" onclick="enviarFormulario()">Send</button>
-    </form>
-
     <script>
-        // Funcionalidad JavaScript
-        function enviarFormulario() {
-            const name = document.getElementById('name').value;
-            const last = document.getElementById('last').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+      // Archivo: script.js
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita que la página se recargue
 
-            if (name && email && message) {
-                alert('¡Thank you, ' + name + '!We have received your message.');
-                document.getElementById('contactForm').reset();
-            } else {
-                alert('Please, fill out all fields before submitting.');
-            }
-        }
-    </script>
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-    <script>
-  // Funcionalidad JavaScript
-
-  const translations = {
-    en: {
-      title: "Contact",
-      labes_name: "Name",
-      labes_last: "Last",
-      labes_email: "Email",
-      labes_msg: "Message",
-      btto: "¡Send!",
-    },
-    es: {
-      title: "Contacto",
-      labes_name: "Nombre",
-      labes_last: "Apellido",
-      labes_email: "Correo",
-      labes_msg: "Mensaje",
-      btto: "Enviar",
-    },
-    fr: {
-      title: "Contact",
-      labes_name: "Nom",
-      labes_last: "Prénom",
-      labes_email: "Email",
-      labes_msg: "Message",
-      btto: "Envoyer",
-    },
-    de: {
-      title: "Kontakt",
-      labes_name: "Name",
-      labes_last: "Nachname",
-      labes_email: "Email",
-      labes_msg: "Nachricht",
-      btto: "Senden",
-    },
-    ru: {
-      title: "Контакт",
-      labes_name: "Имя",
-      labes_last: "Фамилия",
-      labes_email: "Электронная почта",
-      labes_msg: "Сообщение",
-      btto: "Отправить",
+    if (email && password) {
+        alert("Inicio de sesión exitoso.");
+        // Aquí puedes agregar la lógica para enviar los datos al servidor
+    } else {
+        alert("Por favor, completa todos los campos.");
     }
-  };
+});
 
-  function changeLanguage(lang) {
-    document.getElementById('title').innerText = translations[lang].title;
-    document.getElementById('labes_name').innerText = translations[lang].labes_name;
-    document.getElementById('labes_last').innerText = translations[lang].labes_last;
-    document.getElementById('labes_email').innerText = translations[lang].labes_email;
-    document.getElementById('labes_msg').innerText = translations[lang].labes_msg;
-    document.getElementById('btto').innerText = translations[lang].btto;
-  }
-</script>
+    </script>
 </body>
 </html>
