@@ -21,32 +21,24 @@ body {
   }
 
   .logo {
+
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; /* Toma todo el ancho del contenedor */
     cursor: pointer;
-    position: absolute;
-    top: 0;
-    height: auto;
-    width: 100%;
   }
 
   .logojk {
-    position: relative;
-    display: block;
-    margin: auto;
     width: 500px;
-    height: 520px; 
-    transform: scale(0.8);
-
+    height: 520px;
+    object-fit: contain; /* Asegura que la imagen no se deformará */
+    position: relative;
+    /* display: block;
+    margin: auto;
+    transform: scale(0.8); */
   }
 
-    /*  .logojk {
-        position: absolute;
-        top: 0;
-        height: auto;
-        width: 100%;
-    } */
 
   .logo::before {
     content: '';
