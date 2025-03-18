@@ -195,11 +195,39 @@
       <button onclick="changeLanguage('en')">EN - English</button>
       <button onclick="changeLanguage('fr')">FR - Français</button>
       <button onclick="changeLanguage('de')">DE - Deutsch</button>
+      <button onclick="changeLanguage('ru')">RU - Ruso</button>
     </div>
   </div>
     </nav>
   </header>
-  <h1>¡Soon!</h1>
+  <h1 id="title">¡Soon!</h1>
+
+ <script>
+  // Funcionalidad JavaScript
+
+  const translations = {
+    en: {
+      title: "Soon!",
+    },
+    es: {
+      title: "¡Pronto!",
+    },
+    fr: {
+      title: "Bientôt!",
+    },
+    de: {
+      title: "Bald!",
+    },
+    ru: {
+    title: "Скоро!", 
+    }
+  };
+
+  function changeLanguage(lang) {
+    document.getElementById('title').innerText = translations[lang].title;
+  }
+</script>
+
 </body>
 
 </html>
