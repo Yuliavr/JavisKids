@@ -226,7 +226,7 @@ body {
   
 }
 
-.logo {
+.nav_log {
     font-size: 25px;
     text-decoration: none;
     width: 80px;
@@ -234,7 +234,7 @@ body {
     margin-left: 0px; /* Mueve el logo completamente a la izquierda */
 }
 
-.logo img:hover {
+.nav_log img:hover {
     background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
