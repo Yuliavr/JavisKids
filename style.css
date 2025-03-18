@@ -248,7 +248,7 @@ body {
     /* padding: 10px; */ /* Ajusta el espaciado interno del navbar */
 }
 
-.navbar img {
+.navbar .nav_icon {
     text-decoration: none;
     width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
     height: 46px; /* Usa las mismas proporciones del ícono del globo */
@@ -260,13 +260,13 @@ body {
      /* filter: brightness(1.8); */ /* Mejora su visibilidad */  
 }
 
-img.ative {
+/* .nav_icon.ative {
     height: 36px;
 } 
 
-img.contact {
+nav_icon.contact {
     width: 50px;
-} 
+}  */
 
 .language-dropdown {
     position: relative;
