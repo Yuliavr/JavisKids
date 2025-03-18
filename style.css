@@ -20,25 +20,30 @@ body {
     transition-delay: 0.5s; /* Agregado un pequeño retraso */
   }
 
-
   .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
   }
 
   .logojk {
     position: relative;
+    display: block;
+    margin: auto;
     width: 500px;
     height: 520px;
     overflow: hidden;
     transform: scale(0.8);
+
   }
 
-  .logojk {
-    position: absolute;
-    top: 0;
-    height: auto;
-    width: 100%;
-  }
+    /*  .logojk {
+        position: absolute;
+        top: 0;
+        height: auto;
+        width: 100%;
+    } */
 
   .logo::before {
     content: '';
@@ -91,7 +96,7 @@ body {
 
   #title {
     position: relative;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     text-align: center;
     font-family: monospace;
@@ -109,7 +114,7 @@ body {
   }
 
   .footer-text {
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
     color: #fff;
     text-align: center;
