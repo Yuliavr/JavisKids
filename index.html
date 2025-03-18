@@ -1,341 +1,331 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JavisKids</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden; /* Evita las barras de desplazamiento */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #041424;
-    }
-  
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #041424;
-    }
+/*Estilos de la pagina index  */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;;
+    overflow: hidden; /* Evita las barras de desplazamiento */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #041424;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+  }
 
-    .fade-out {
-      opacity: 0;
-      transition: opacity 2s;
-      transition-delay: 0.5s; /* Agregado un pequeño retraso */
+  .fade-out {
+    opacity: 0;
+    transition: opacity 2s;
+    transition-delay: 0.5s; /* Agregado un pequeño retraso */
+  }
+
+
+  .logo {
+    cursor: pointer;
+  }
+
+  .logojk {
+    position: relative;
+    width: 500px;
+    height: 520px;
+    overflow: hidden;
+    transform: scale(0.8);
+  }
+
+  .logojk img {
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .logo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    height: 120px;
+    /* background: #000; */
+    z-index: 2;
+  }
+
+  .logo::after, h3::before, .footer-text::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #041424, #041424);
+    z-index: 3;
+    animation: animate 2s linear forwards;
+  }
+
+  @keyframes animate {
+    0% {
+      right: 0%;
     }
-  
-    .logo {
-      cursor: pointer;
+    100% {
+      right: -400%;
     }
-  
+  }
+
+  @keyframes reverse-animate {
+    0% {
+      left: 0%;
+    }
+    100% {
+      left: -400%;
+    }
+  }
+
+  .animate-logo::after, .animate-h3::before, .footer-text::before {
+    animation: animate 4s linear forwards;
+  }
+
+  .reverse-animate-logo::after, .reverse-animate-h3::before, .footer-text::before{
+    animation: reverse-animate 4s linear forwards;
+  }
+
+  h3 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: monospace;
+    color: #fff;
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 25px;
+    overflow: hidden;
+    margin-top: -50px;
+  }
+
+  .footer {
+    height: auto;
+    max-height: 100px; /* Ajusta según sea necesario */
+  }
+
+  .footer-text {
+    margin: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: monospace;
+    font-size: 12px; /* Tamaño pequeño */
+    text-transform: uppercase;
+    letter-spacing: 5px; /* Ajuste del espaciado de letras */
+    overflow: hidden;
+    text-decoration: none;
+    margin-top: 20px; /* Ajuste del margen superior */
+  }
+
+  .footer-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #041424, transparent, transparent);
+    z-index: 3;
+    animation: reverse-animate 2s linear forwards;
+  }
+
+  /* Media queries para dispositivos móviles */
+  @media (max-width: 600px) {
     .logojk {
-      position: relative;
-      width: 500px;
-      height: 520px;
-      overflow: hidden;
-      transform: scale(0.8);
+      width: 300px;
+      height: 320px;
     }
-  
-    .logojk img {
-      position: absolute;
-      top: 0;
-      height: auto;
-      width: 100%;
-    }
-
-    .logo::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -30px;
-      width: 100%;
-      height: 120px;
-      /* background: #000; */
-      z-index: 2;
-    }
-  
-    .logo::after, h3::before, .footer-text::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 400%;
-      height: 100%;
-      background: linear-gradient(to right, transparent, #041424, #041424);
-      z-index: 3;
-      animation: animate 2s linear forwards;
-    }
-  
-    @keyframes animate {
-      0% {
-        right: 0%;
-      }
-      100% {
-        right: -400%;
-      }
-    }
-  
-    @keyframes reverse-animate {
-      0% {
-        left: 0%;
-      }
-      100% {
-        left: -400%;
-      }
-    }
-  
-    .animate-logo::after, .animate-h3::before, .footer-text::before {
-      animation: animate 4s linear forwards;
-    }
-  
-    .reverse-animate-logo::after, .reverse-animate-h3::before, .footer-text::before{
-      animation: reverse-animate 4s linear forwards;
-    }
-  
-    .fade-out {
-      opacity: 0;
-      transition: opacity 2s;
-    }
-
-  
+    
     h3 {
-      position: relative;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      font-family: monospace;
-      color: #fff;
-      font-size: 70px;
-      text-transform: uppercase;
-      letter-spacing: 25px;
-      overflow: hidden;
-      margin-top: -50px;
+      font-size: 40px;
+      letter-spacing: 10px;
     }
-
-    .footer {
-  height: auto;
-  max-height: 100px; /* Ajusta según sea necesario */
-}
-  
+    
     .footer-text {
-      margin: 0;
-      width: 100%;
-      height: auto;
-      color: #fff;
-      text-align: center;
-      font-family: monospace;
-      font-size: 12px; /* Tamaño pequeño */
-      text-transform: uppercase;
-      letter-spacing: 5px; /* Ajuste del espaciado de letras */
-      overflow: hidden;
-      text-decoration: none;
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-top: 10px; /* Ajuste del margen superior */
+    }
+  }
+
+  /* Media queries para tablets */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .logojk {
+      width: 400px;
+      height: 420px;
+    }
+    
+    h3 {
+      font-size: 50px;
+      letter-spacing: 15px;
+    }
+    
+    .footer-text {
+      font-size: 11px;
+      letter-spacing: 3px;
       margin-top: 20px; /* Ajuste del margen superior */
     }
+  }
 
-    .footer-text::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, #041424, transparent, transparent);
-      z-index: 3;
-      animation: reverse-animate 2s linear forwards;
+  /* Media queries para portátiles */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .logojk {
+      width: 450px;
+      height: 470px;
     }
-
-    /* Media queries para dispositivos móviles */
-    @media (max-width: 600px) {
-      .logojk {
-        width: 300px;
-        height: 320px;
-      }
-      
-      h3 {
-        font-size: 40px;
-        letter-spacing: 10px;
-      }
-      
-      .footer-text {
-        font-size: 10px;
-        letter-spacing: 2px;
-        margin-top: 10px; /* Ajuste del margen superior */
-      }
+    
+    h3 {
+      font-size: 60px;
+      letter-spacing: 20px;
     }
-
-    /* Media queries para tablets */
-    @media (min-width: 601px) and (max-width: 1024px) {
-      .logojk {
-        width: 400px;
-        height: 420px;
-      }
-      
-      h3 {
-        font-size: 50px;
-        letter-spacing: 15px;
-      }
-      
-      .footer-text {
-        font-size: 11px;
-        letter-spacing: 3px;
-        margin-top: 20px; /* Ajuste del margen superior */
-      }
+    
+    .footer-text {
+      font-size: 12px;
+      letter-spacing: 4px;
+      margin-top: 20px; /* Ajuste del margen superior */
     }
+  }
 
-    /* Media queries para portátiles */
-    @media (min-width: 1025px) and (max-width: 1440px) {
-      .logojk {
-        width: 450px;
-        height: 470px;
-      }
-      
-      h3 {
-        font-size: 60px;
-        letter-spacing: 20px;
-      }
-      
-      .footer-text {
-        font-size: 12px;
-        letter-spacing: 4px;
-        margin-top: 20px; /* Ajuste del margen superior */
-      }
+  /* Media queries para pantallas grandes */
+  @media (min-width: 1441px) {
+    .logojk {
+      width: 500px;
+      height: 520px;
     }
-
-    /* Media queries para pantallas grandes */
-    @media (min-width: 1441px) {
-      .logojk {
-        width: 500px;
-        height: 520px;
-      }
-      
-      h3 {
-        font-size: 70px;
-        letter-spacing: 25px;
-      }
-      
-      .footer-text {
-        font-size: 14px;
-        letter-spacing: 5px;
-        margin-top: 20px; /* Ajuste del margen superior */
-      }
+    
+    h3 {
+      font-size: 70px;
+      letter-spacing: 25px;
     }
-  </style>
-</head>
-<body>
-  <div class="logo" onclick="reverseAnimation(); playAudio()">
-    <img class="logojk" src="logo/img/logo.png" alt="JavisKids Logo" />
-  </div>
-  <h3>JavisKids</h3>
-  <audio id="audioElement" preload="auto">
-    <source src="logo/audio/logo.mp3" type="audio/mpeg">
-  </audio>
-  <footer class="footer">
-    <p class="footer-text">
-      &copy; 2025 JavisKids, All rights reserved. <br> Founder: Yulia Vesga
-    </p>    
-  </footer>
-  <script>
-    function playAudio() {
-      var audio = document.getElementById("audioElement");
-      audio.play();
-      startAnimation();
+    
+    .footer-text {
+      font-size: 14px;
+      letter-spacing: 5px;
+      margin-top: 20px; /* Ajuste del margen superior */
     }
+  }
 
-    function startAnimation() {
-      var logo = document.querySelector(".logo");
-      var h3 = document.querySelector("h3");
-      var footer = document.querySelector(".footer");
-      
-      // Reiniciar la animación
-      logo.classList.remove("animate-logo", "reverse-animate-logo");
-      h3.classList.remove("animate-h3", "reverse-animate-h3");
-      footer.classList.remove("fade-out", "reverse-animate-footer");
+/* Estilos de la pagina navbar */
 
-      
-      // Forzar el reflow para reiniciar la animación
-      void logo.offsetWidth;
-      void h3.offsetWidth;
-      void footer.offsetWidth;
-      
-      // Agregar las clases para iniciar la animación
-      logo.classList.add("fade-out", "animate-logo");
-      h3.classList.add("fade-out", "animate-h3");
-      /* footer.classList.add("fade-out"); */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
+    align-items: center;
+    z-index: 100; 
+  
+}
 
-      // Iniciar el desvanecimiento de los elementos
-    fadeOutElements();
+.logo {
+    font-size: 25px;
+    text-decoration: none;
+    width: 80px;
+    height: 80px;
+    margin-left: 0px; /* Mueve el logo completamente a la izquierda */
+}
 
-    }
+.logo img:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
 
-    function reverseAnimation() {
-      var logo = document.querySelector(".logo");
-      var h3 = document.querySelector("h3");
-      var footer = document.querySelector(".footer");
-      
-      // Remover las clases de animación normal
-      logo.classList.remove("animate-logo", "fade-out", "reverse-animate-logo");
-      h3.classList.remove("animate-h3", "fade-out", "reverse-animate-h3");
-      footer.classList.remove("fade-out");
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Alinea los íconos a la derecha */
+    align-items: center; /* Alinea los iconos verticalmente */
+    gap: 15px; /* Espaciado uniforme entre los íconos */
+    /* padding: 10px; */ /* Ajusta el espaciado interno del navbar */
+}
 
-      // Eliminar event listeners previos
-      logo.removeEventListener("animationend", fadeOutElements);
-      h3.removeEventListener("animationend", fadeOutElements);
-      footer.removeEventListener("animationend", fadeOutElements);
+.navbar img {
+    text-decoration: none;
+    width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
+    height: 46px; /* Usa las mismas proporciones del ícono del globo */
+    margin-right: 0px; /* Mueve el logo completamente a la izquierda */
+    padding: 4px; /* Asegura que no sea demasiado grande */
+        /* font-size:15px; */
+    /* font-weight:500; */ /* poner letras negritas */
+     /* margin: 0 10px; /* Espaciado entre íconos */ 
+     /* filter: brightness(1.8); */ /* Mejora su visibilidad */  
+}
+
+img.ative {
+    height: 36px;
+} 
+
+img.contact {
+    width: 50px;
+} 
+
+.language-dropdown {
+    position: relative;
+    margin: 0 auto; /* Mueve el logo completamente a la izquierda */
+    text-align: center; /* Asegura que esté alineado */
+}
+
+.dropdown-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 34px; /* Hace el ícono más grande */
+    padding: 0px; /* Asegura que no sea demasiado grande */
+}
+
+.dropdown-button:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+   
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 120px;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    color: white; /* Cambia el color del texto a blanco */ 
+    border-radius: 8px; 
+    z-index: 1;
+    margin-left: -25px; /* Mueve el logo completamente a la izquierda */
+     /* background-color: #182739; */
+}
+
+.dropdown-content button {
+    background-color: transparent; /* Fondo transparente para los botones */
+    color: white; /* Texto blanco */
+    border: none;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-content button:hover {
+    background-color: #182739; 
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block; 
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
+    color: white; /* Asegura que las letras sigan siendo blancas */
+}
+
+/* Fin Navbar */
 
 
-      // Agregar las clases para la animación inversa
-      logo.classList.add("reverse-animate-logo");
-      h3.classList.add("reverse-animate-h3");
 
-      // Escuchar el final de la animación inversa para ocultar los elementos
-      logo.addEventListener("animationend", fadeOutElements);
-      h3.addEventListener("animationend", fadeOutElements);
-      footer.addEventListener("animationend", fadeOutElements);
-    }
-
-    function fadeOutElements() {
-      var logo = document.querySelector(".logo");
-      var h3 = document.querySelector("h3");
-      var footer = document.querySelector(".footer");
-      
-      // Añadir clase para el desvanecimiento
-      logo.classList.add("fade-out");
-      h3.classList.add("fade-out");
-      footer.classList.add("fade-out");
-
-      // Escuchar el final del desvanecimiento para ocultar los elementos
-      logo.addEventListener("transitionend", hideElements);
-      h3.addEventListener("transitionend", hideElements);
-      footer.addEventListener("transitionend", hideElements);
-    }
-
-    function hideElements() {
-      var logo = document.querySelector(".logo");
-      var h3 = document.querySelector("h3");
-      var footer = document.querySelector(".footer");
-
-
-      logo.style.display = "none";
-      h3.style.display = "none";
-      footer.style.display = "none";
-
-    // Redirigir a otro archivo HTML
-    window.location.href = "pages/home.html"; // Cambia "tu_otro_archivo.html" por la ruta de tu archivo HTML
-
-    }
-  </script>
-</body>
-
-</html>
+/* Estilos de la pagina console */
