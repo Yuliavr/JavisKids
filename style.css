@@ -1,365 +1,365 @@
 /*Estilos de la pagina index  */
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    /*height: 100vh;*/
-    min-height: 100vh; /* Permite que el contenido crezca más allá de la altura de la ventana si es necesario */
-    overflow: hidden; /* Evita las barras de desplazamiento */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #041424;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-  }
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;  /* Permite que el contenido crezca más allá de la altura de la ventana si es necesario */
+ /* overflow: hidden; *//* Evita las barras de desplazamiento */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #041424;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
 
 .fade-out {
-    opacity: 0;
-    transition: opacity 2s;
-    transition-delay: 0.5s; /* Agregado un pequeño retraso */
-  }
+  opacity: 0;
+  transition: opacity 2s;
+  transition-delay: 0.5s; /* Agregado un pequeño retraso */
+}
 
-  .container {
-    display: flex;
-    flex-direction: column; /* Apila logo y texto */
-    align-items: center;
-    justify-content: center; /* Centra verticalmente el contenido principal */
-    /* flex-grow: 1;*/ /* Permite que ocupe espacio flexible entre header y footer */
-    /*justify-content: flex-start; *//* Mantén los elementos en la parte superior */
-     min-height: calc(100vh - 60px); /* Considera la altura total menos la del footer */
+.container {
+  display: flex;
+  flex-direction: column; /* Apila logo y texto */
+  align-items: center;
+  justify-content: center; /* Centra verticalmente el contenido principal */
+  /* flex-grow: 1;*/ /* Permite que ocupe espacio flexible entre header y footer */
+  /*justify-content: flex-start; *//* Mantén los elementos en la parte superior */
+  gap: 10px; /* Ajusta la separación entre el logo y el título */
+  height: 80vh; /* Considera la altura total menos la del footer */
+}
+
+#title {
+  margin: 0; /* Ajusta el espacio entre logo y título */
+  text-align: center;
+  font-family: monospace;
+  color: #fff;
+  font-size: 70px;
+  text-transform: uppercase;
+  letter-spacing: 25px;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  background: transparent;
+  padding: 10px 0; /* Espaciado interno */
+  margin-top: 0; /* Empuja el footer hacia abajo si hay espacio sobrante */
+}
+
+.footer-text {
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: monospace;
+  font-size: 12px; /* Tamaño pequeño */
+  text-transform: uppercase;
+  letter-spacing: 5px; /* Ajuste del espaciado de letras */
+  overflow: hidden;
+  text-decoration: none;
+  /* margin-top: 20px; /* Ajuste del margen superior */ 
+}
+
+.footer-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #041424, transparent, transparent);
+  z-index: 3;
+  animation: reverse-animate 2s linear forwards;
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .logojk {
-    width: 500px;
-    height: auto; /* Mantiene las proporciones del logo */
-    margin: 0 auto;
+  width: 500px;
+  height: auto; /* Mantiene las proporciones del logo */
+  margin: 0 auto;
 }
 
 
 .logo::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    /* bottom: -30px; */
-    bottom: 0; /* Alineado perfectamente en la parte inferior */
-    width: 100%;
-    height: 120px;
-    /* background: #000; */
-    z-index: 2;
-  }
+  content: '';
+  position: absolute;
+  left: 0;
+  /* bottom: -30px; */
+  bottom: 0; /* Alineado perfectamente en la parte inferior */
+  width: 100%;
+  height: 120px;
+  /* background: #000; */
+  z-index: 2;
+}
 
 .logo::after, #title::before, .footer-text::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 400%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, #041424, #041424);
-    z-index: 3;
-    animation: animate 2s linear forwards;
-  }
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #041424, #041424);
+  z-index: 3;
+  animation: animate 2s linear forwards;
+}
 
 @keyframes animate {
-    0% {
-      right: 0%;
-    }
-    100% {
-      right: -400%;
-    }
+  0% {
+    right: 0%;
   }
+  100% {
+    right: -400%;
+  }
+}
 
 @keyframes reverse-animate {
-    0% {
-      left: 0%;
-    }
-    100% {
-      left: -400%;
-    }
+  0% {
+    left: 0%;
   }
+  100% {
+    left: -400%;
+  }
+}
 
 .animate-logo::after, .animate-#title::before, .footer-text::before {
-    animation: animate 4s linear forwards;
-  }
+  animation: animate 4s linear forwards;
+}
 
 .reverse-animate-logo::after, .reverse-animate-#title::before, .footer-text::before{
-    animation: reverse-animate 4s linear forwards;
-  }
+  animation: reverse-animate 4s linear forwards;
+}
 
+
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+  .logojk {
+    width: 300px;
+    height: 320px;
+  }
+  
   #title {
-    margin-top: 20px; /* Ajusta el espacio entre logo y título */
-    text-align: center;
-    font-family: monospace;
-    color: #fff;
-    font-size: 70px;
-    text-transform: uppercase;
-    letter-spacing: 25px;
-}
-
-.footer {
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 12px;
-    background: transparent;
-    padding: 10px 0; /* Espaciado interno */
-    margin-top: auto; /* Empuja el footer hacia abajo si hay espacio sobrante */
-}
-
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+  
   .footer-text {
-    margin: 0 auto;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    font-family: monospace;
-    font-size: 12px; /* Tamaño pequeño */
-    text-transform: uppercase;
-    letter-spacing: 5px; /* Ajuste del espaciado de letras */
-    overflow: hidden;
-    text-decoration: none;
-    /* margin-top: 20px; /* Ajuste del margen superior */ 
+    font-size: 10px;
+    letter-spacing: 2px;
   }
+}
 
-  .footer-text::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, #041424, transparent, transparent);
-    z-index: 3;
-    animation: reverse-animate 2s linear forwards;
+/* Media queries para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .logojk {
+    width: 400px;
+    height: 420px;
   }
+  
+  #title {
+    font-size: 50px;
+    letter-spacing: 15px;
+  }
+  
+  .footer-text {
+    font-size: 11px;
+    letter-spacing: 3px;
+    
+  }
+}
 
-  /* Media queries para dispositivos móviles */
-  @media (max-width: 600px) {
-    .logojk {
-      width: 300px;
-      height: 320px;
-    }
-    
-    #title {
-      font-size: 40px;
-      letter-spacing: 10px;
-    }
-    
-    .footer-text {
-      font-size: 10px;
-      letter-spacing: 2px;
-      margin-top: 10px; /* Ajuste del margen superior */
-    }
+/* Media queries para portátiles */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .logojk {
+    width: 450px;
+    height: 470px;
   }
+  
+  #title {
+    font-size: 60px;
+    letter-spacing: 20px;
+  }
+  
+  .footer-text {
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+}
 
-  /* Media queries para tablets */
-  @media (min-width: 601px) and (max-width: 1024px) {
-    .logojk {
-      width: 400px;
-      height: 420px;
-    }
-    
-    #title {
-      font-size: 50px;
-      letter-spacing: 15px;
-    }
-    
-    .footer-text {
-      font-size: 11px;
-      letter-spacing: 3px;
-      margin-top: 20px; /* Ajuste del margen superior */
-    }
+/* Media queries para pantallas grandes */
+@media (min-width: 1441px) {
+  .logojk {
+    width: 500px;
+    height: 520px;
   }
-
-  /* Media queries para portátiles */
-  @media (min-width: 1025px) and (max-width: 1440px) {
-    .logojk {
-      width: 450px;
-      height: 470px;
-    }
-    
-    #title {
-      font-size: 60px;
-      letter-spacing: 20px;
-    }
-    
-    .footer-text {
-      font-size: 12px;
-      letter-spacing: 4px;
-      margin-top: 20px; /* Ajuste del margen superior */
-    }
+  
+  #title {
+    font-size: 70px;
+    letter-spacing: 25px;
   }
-
-  /* Media queries para pantallas grandes */
-  @media (min-width: 1441px) {
-    .logojk {
-      width: 500px;
-      height: 520px;
-    }
-    
-    #title {
-      font-size: 70px;
-      letter-spacing: 25px;
-    }
-    
-    .footer-text {
-      font-size: 14px;
-      letter-spacing: 5px;
-      margin-top: 20px; /* Ajuste del margen superior */
-    }
+  
+  .footer-text {
+    font-size: 14px;
+    letter-spacing: 5px;
   }
+}
 
 /* Estilos de la pagina navbar */
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
-    align-items: center;/* Centra verticalmente */
-    z-index: 1000; /* Asegura que esté encima del contenido */
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
+  align-items: center;/* Centra verticalmente */
+  z-index: 1000; /* Asegura que esté encima del contenido */
+
 }
 
 .nav_log {
-    /* font-size: 25px;
-    text-decoration: none; */
-    width: 80px;
-    height: 80px;
-    /* margin-left: 0px; */ /* Mueve el logo completamente a la izquierda */
-    object-fit: contain; /* Evita distorsión */
+  /* font-size: 25px;
+  text-decoration: none; */
+  width: 80px;
+  height: 80px;
+  /* margin-left: 0px; */ /* Mueve el logo completamente a la izquierda */
+  object-fit: contain; /* Evita distorsión */
 }
 
 .nav_log:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
 .navbar {
-    display: flex;
-    /* justify-content: flex-end; */ /* Alinea los íconos a la derecha */
-    align-items: center; /* Alinea los iconos verticalmente */
-    gap: 15px; /* Espaciado uniforme entre los íconos */
-    /* padding: 10px; */ /* Ajusta el espaciado interno del navbar */
+  display: flex;
+  /* justify-content: flex-end; */ /* Alinea los íconos a la derecha */
+  align-items: center; /* Alinea los iconos verticalmente */
+  gap: 15px; /* Espaciado uniforme entre los íconos */
+  /* padding: 10px; */ /* Ajusta el espaciado interno del navbar */
 }
 
 .navbar .nav_icon {
-    text-decoration: none;
-    width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
-    height: 46px; /* Usa las mismas proporciones del ícono del globo */
-    margin-right: 0px; /* Mueve el logo completamente a la izquierda */
-    padding: 4px; /* Asegura que no sea demasiado grande */
-    cursor: pointer;
-    transition: transform 0.3s; /* Agrega una animación suave */
-        /* font-size:15px; */
-    /* font-weight:500; */ /* poner letras negritas */
-     /* margin: 0 10px; /* Espaciado entre íconos */ 
-     /* filter: brightness(1.8); */ /* Mejora su visibilidad */  
+  text-decoration: none;
+  width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
+  height: 46px; /* Usa las mismas proporciones del ícono del globo */
+  margin-right: 0px; /* Mueve el logo completamente a la izquierda */
+  padding: 4px; /* Asegura que no sea demasiado grande */
+  cursor: pointer;
+  transition: transform 0.3s; /* Agrega una animación suave */
+      /* font-size:15px; */
+  /* font-weight:500; */ /* poner letras negritas */
+   /* margin: 0 10px; /* Espaciado entre íconos */ 
+   /* filter: brightness(1.8); */ /* Mejora su visibilidad */  
 }
 
 .navbar .nav_icon:hover {
-    transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+  transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
 }
 
 /* .nav_icon.ative {
-    height: 36px;
+  height: 36px;
 } 
 
 nav_icon.contact {
-    width: 50px;
+  width: 50px;
 }  */
 
 /* Dropdown de idioma */
 .language-dropdown {
-    position: relative;
-    /* margin: 0 auto; */ /* Mueve el logo completamente a la izquierda */
-    /* text-align: center; */ /* Asegura que esté alineado */
+  position: relative;
+  /* margin: 0 auto; */ /* Mueve el logo completamente a la izquierda */
+  /* text-align: center; */ /* Asegura que esté alineado */
 }
 
 .dropdown-button {
-    background-color: transparent;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    /* font-weight: bold; */
-    font-size: 34px; /* Hace el ícono más grande */
-    /* padding: 0px; */ /* Asegura que no sea demasiado grande */
-    transition: transform 0.3s;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  /* font-weight: bold; */
+  font-size: 34px; /* Hace el ícono más grande */
+  /* padding: 0px; */ /* Asegura que no sea demasiado grande */
+  transition: transform 0.3s;
 }
 
 .dropdown-button:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-   
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+ 
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 50px; /* Ajusta la posición debajo del botón */
-    right: 0;
-    /* min-width: 120px; */
-    background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    color: white; /* Cambia el color del texto a blanco */ 
-    border-radius: 8px; 
-    /* z-index: 1; */
-    z-index: 1001;
-    margin-left: -25px; /* Mueve el logo completamente a la izquierda */
-     /* background-color: #182739; */
-     padding: 10px;
+  display: none;
+  position: absolute;
+  top: 50px; /* Ajusta la posición debajo del botón */
+  right: 0;
+  /* min-width: 120px; */
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  color: white; /* Cambia el color del texto a blanco */ 
+  border-radius: 8px; 
+  /* z-index: 1; */
+  z-index: 1001;
+  margin-left: -25px; /* Mueve el logo completamente a la izquierda */
+   /* background-color: #182739; */
+   padding: 10px;
 }
 
 .dropdown-content button {
-    display: block;
-    background-color: transparent; /* Fondo transparente para los botones */
-    color: #fff; /* Texto blanco */
-    border: none;
-    text-align: left;
-    font-size: 14px;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
+  display: block;
+  background-color: transparent; /* Fondo transparente para los botones */
+  color: #fff; /* Texto blanco */
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
 }
 
 .dropdown-content button:hover {
-    background-color: #182739; 
+  background-color: #182739; 
 }
 
 .language-dropdown:hover .dropdown-content {
-    display: block; 
-    /* background-color: rgba(255, 255, 255, 0.2); */ /* Efecto hover con fondo blanco y transparencia */
-    /* color: white; */ /* Asegura que las letras sigan siendo blancas */
+  display: block; 
+  /* background-color: rgba(255, 255, 255, 0.2); */ /* Efecto hover con fondo blanco y transparencia */
+  /* color: white; */ /* Asegura que las letras sigan siendo blancas */
 }
 
 @media (max-width: 768px) {
-    .nav_log {
-        width: 40px;
-        height: 40px;
-    }
+  .nav_log {
+      width: 40px;
+      height: 40px;
+  }
 
-    .navbar .nav_icon {
-        width: 30px;
-        height: 30px;
-    }
+  .navbar .nav_icon {
+      width: 30px;
+      height: 30px;
+  }
 
-    .dropdown-button {
-        font-size: 25px;
-    }
+  .dropdown-button {
+      font-size: 25px;
+  }
 }
 
 /* Fin Navbar */
