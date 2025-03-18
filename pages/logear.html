@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_JavisKids</title>
+     <style>
+   /* Archivo: styles.css */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+             
+    }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #041424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: monospace;
+}
+
+        
+h1 {
+    text-align: center;
+    color: #295a87;
+    margin-top: 120px; /* Añade un margen superior para evitar la superposición */
+    font-size: 36px; /* Ajusta el tamaño si es necesario */
+    overflow: hidden;
+    font-family: monospace;
+}
+
+        /* Ajusta la posición del formulario para que esté más abajo */
+form {
+    max-width: 400px;
+    margin: 30px auto; /* Esto asegura que el formulario esté centrado con más espacio desde el menú */
+    padding: 10px;
+    background-color: #1c3349;
+    box-shadow: 0 0 5px #0ef;
+    border-radius: 8px;
+    color: #fff;
+    overflow: hidden;
+    font-family: monospace;
+}
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-family: monospace;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+
+        textarea {
+            height: 150px; /* Haciendo el cuadro más alto */
+             overflow: hidden;
+        }
+
+        button {
+            /* background-color: #007bff; */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            background-color: #0c141e;
+
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+p {
+    margin-top: 15px;
+    color: #666;
+    text-align: center;
+}
+
+a {
+    color: #0ef;
+    text-decoration: none;
+}
+
+/* Navbar */
+
+    /* Menú fijo, destacando su estética */
+    .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+   background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+    .logo {
+      font-size: 25px;
+      text-decoration: none;
+      width: 80px;
+      height: 80px;
+      /* margin-left: auto; */ /* Empuja los íconos hacia la izquierda del navbar */
+      /* cursor:default;
+     animation:slideRight 1s ease forwards; */
+     /* color:#0ef; */
+     /* border:3px solid #0ef; */
+    }
+
+    .navbar .logo:hover {
+       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+       border-radius: 8px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-end; /* Alinea los íconos a la derecha */
+      align-items: center; /* Alinea los iconos verticalmente */
+      /* padding: 10px; */ /* Ajusta el espaciado interno del navbar */
+      gap: 15px;  /* Espaciado uniforme entre los íconos */
+    }
+
+    .navbar img {
+      /* font-size:15px; */
+      color: #ffff;
+      text-decoration: none;
+      /* font-weight:500; */ /* poner letras negritas */
+      width: 46px; /* Ajusta este valor al tamaño del ícono del globo */
+      height: 46px; /* Usa las mismas proporciones del ícono del globo */
+      margin-right: 0px; /* Mueve el logo completamente a la izquierda */
+      padding: 4px; /* Asegura que no sea demasiado grande */
+      /* filter: brightness(1.8); */ /* Mejora su visibilidad */
+    }
+    
+
+    /*cambia color al nav*/
+    .navbar img:hover {
+       background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+       border-radius: 8px;
+    }
+
+    img.ative {
+      height: 36px;
+    } 
+
+     img.contact {
+      width: 50px;
+    } 
+/* 
+    img.dative {
+      width: 44px;
+      height: 48px;
+    }  */
+
+    .language-dropdown {
+  position: relative;
+  margin: 0 auto; /* Mueve el logo completamente a la izquierda */
+      text-align: center; /* Asegura que esté alineado */
+
+    }
+
+    /* icono de tierra */    
+  .dropdown-button {
+  background-color: transparent;
+  /*color: white; */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 34px; /* Hace el ícono más grande */
+  padding: 0px; /* Asegura que no sea demasiado grande */
+    margin-top: 15px;
+    }
+
+.dropdown-button:hover {
+   background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+ border-radius: 8px;
+  
+}
+
+.dropdown-content {
+ display: none;
+  position: absolute;
+  top: 70px; /* Ajusta según la altura del botón */
+  left: 0%;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
+    color: white; /* Cambia el color del texto a blanco */
+  /* background-color: #182739; */
+  min-width: 120px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px; 
+  z-index: 1;
+  margin-left: -25px; /* Mueve el logo completamente a la izquierda */
+  font-size: 8px; /* Hace el ícono más grande */
+font-family: monospace;
+}
+
+/*textos idiomas  */
+.dropdown-content button {
+ background-color: transparent; /* Fondo transparente para los botones */
+ color: white; /* Texto blanco */
+ border: none;
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px; /* Hace el ícono más grande */
+ font-family: 'Poppins', sans-serif;
+    margin: 0px;
+
+}
+
+.dropdown-content button:hover {
+  background-color: #182739; 
+  
+}
+
+.language-dropdown:hover .dropdown-content {
+  display: block; 
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
+  color: white; /* Asegura que las letras sigan siendo blancas */
+}
+
+  </style>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><img class="logo" src="icons/logobluec.png" alt="logo" /></a>
+    
+        <nav class="navbar">
+          <a href="home.html"><img class="homem" src="icons/home.png" alt="home" /></a>
+          <a href="console.html"><img class="dative" src="icons/cmdedi.png" alt="consola" /></a>
+          <a href="contact.html"><img class="contact" src="icons/contact.png" alt="contact" /></img></a>
+          <a href="shop.html"><img class="" src="icons/shop.png"  alt="shop" /></img></a>
+          
+    
+          <!-- Colocamos el idioma justo al lado del carrito -->
+      <div class="language-dropdown">
+        <button class="dropdown-button" aria-label="Selector de idioma">🌍</button>
+        <div class="dropdown-content">
+          <button onclick="changeLanguage('es')">ES - Español</button>
+          <button onclick="changeLanguage('en')">EN - English</button>
+          <button onclick="changeLanguage('fr')">FR - Français</button>
+          <button onclick="changeLanguage('de')">DE - Deutsch</button>
+          <button onclick="changeLanguage('ru')">RU - Ruso</button>
+        </div>
+      </div>
+        </nav>
+      </header>
+    <div class="login-container">
+        <h1 id="title">Login</h1>
+        <form id="loginForm">
+            <label id="labes_email" for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label id="labes_pass" for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button id="btto" type="submit">Login</button>
+        </form>
+        <p id="descripcion">¿Don't have an account? <a id="regis" href="#">Register</a></p>
+    </div>
+    <script>
+      // Archivo: script.js
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita que la página se recargue
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email && password) {
+        alert("Successful login.");
+        // Aquí puedes agregar la lógica para enviar los datos al servidor
+    } else {
+        alert("Please complete all fields.");
+    }
+});
+
+    </script>
+
+     <script>
+  // Funcionalidad JavaScript
+
+  const translations = {
+    en: {
+      title: "Login",
+      labes_email: "Email",
+      labes_pass: "Password",
+      btto: "Login",
+      descripcion: "¿Don't have an account?",
+      regis: "Register",
+    },
+    es: {
+      title: "Iniciar Sesion",
+      labes_email: "Email",
+      labes_pass: "Contraseña",
+      btto: "Iniciar",
+      descripcion: "¿No tienes una cuenta?",
+      regis: "Registrate",
+    },
+    fr: {
+      title: "Se connecter",
+      labes_email: "Email",
+      labes_pass: "Mot de passe",
+      btto: "connecter",
+      descripcion: "¿Vous n'avez pas de compte ?",
+      regis: "Inscrivez-vous",
+    },
+    de: {
+      title: "Anmelden",
+      labes_email: "Email",
+      labes_pass: "Passwort",
+      btto: "Starten",
+      descripcion: "¿Haben Sie kein Konto?",
+      regis: "Registrieren",
+    },
+    ru: {
+      title: "Войти",
+      labes_email: "электронная почта",
+      labes_pass: "Пароль",
+      btto: "Начать",
+      descripcion: "¿У вас нет аккаунта?",
+      regis: "Зарегистрироваться",
+    }
+  };
+
+  function changeLanguage(lang) {
+    document.getElementById('title').innerText = translations[lang].title;
+    document.getElementById('labes_email').innerText = translations[lang].labes_email;
+    document.getElementById('labes_pass').innerText = translations[lang].labes_pass;
+    document.getElementById('btto').innerText = translations[lang].btto;
+    document.getElementById('descripcion').innerText = translations[lang].descripcion;
+    document.getElementById('regis').innerText = translations[lang].regis;
+  }
+  </script>
+</body>
+</html>
