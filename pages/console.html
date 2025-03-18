@@ -1,48 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-  <meta name="viewport" content="width=device-width">
-  <title>Home_JavisKids</title>
-  <!-- <link href="style.css" rel="stylesheet"/> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Console_JavisKids</title>
   <style>
-    * {
+       * {
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
       box-sizing: border-box;
+      font-family: 'Courier New', Courier, monospace;
     }
-
+        /* Estilos CSS */
+        
     body {
+      margin: 0;
+      padding: 0;
       background-color: #041424;
-      color: #ffff;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Navbar */
-
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 20px 10%;
-      background: transparent;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
       display: flex;
-      justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
+      justify-content: center;
       align-items: center;
-      z-index: 100;
+      height: 100vh;
     }
+
+        /* Navbar */
+
+    /* Menú fijo, destacando su estética */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+   background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
 
     .logo {
       font-size: 25px;
       text-decoration: none;
       width: 80px;
       height: 80px;
-      margin-left: 0px; /* Mueve el logo completamente a la izquierda */
+      /* margin-left: auto; */ /* Empuja los íconos hacia la izquierda del navbar */
       /* cursor:default;
      animation:slideRight 1s ease forwards; */
      /* color:#0ef; */
@@ -59,7 +64,8 @@
       display: flex;
       justify-content: flex-end; /* Alinea los íconos a la derecha */
       align-items: center; /* Alinea los iconos verticalmente */
-      gap: 15px; /* Espaciado uniforme entre los íconos */
+      /* padding: 10px; */ /* Ajusta el espaciado interno del navbar */
+      gap: 15px;  /* Espaciado uniforme entre los íconos */
     }
 
     .navbar img {
@@ -72,6 +78,7 @@
       /* margin: 0 10px; /* Espaciado entre íconos */ 
       margin-right: 0px; /* Mueve el logo completamente a la izquierda */
       padding: 4px; /* Asegura que no sea demasiado grande */
+      /* filter: brightness(1.8); */ /* Mejora su visibilidad */
     }
     
 
@@ -153,145 +160,15 @@
   background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo blanco y transparencia */
   color: white; /* Asegura que las letras sigan siendo blancas */
 }
+        
+    
 
-
-/* Secciones */
-.section {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 10%;
+    h1 {
+      font-size: 72px;
+      color: #0ef;
+      text-shadow: 0 0 0px #0ef;
+      text-transform: uppercase;
     }
-
-    /* Ajustes en el CSS */
-    .home {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center; /* Centra horizontalmente */
-      align-items: center; /* Centra verticalmente */
-    }
-
-    .home-content {
-      text-align: center; /* Asegura que el contenido esté alineado al centro */
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      max-width: 90%;
-}
-
-    .home-content p {
-    margin-bottom: 15px; /* Espaciado uniforme entre párrafos */
-}
-
-    #title {
-      font-size: 80px;
-      color: #295a87;
-      margin: 20px 0;
-      width: auto; /* Quita el ancho del 180% */
-      font-family: monospace;
-      text-align: center; /* Texto centrado */
-    }
-
-  #description {
-    /*width: auto;*/ /* Ajusta automáticamente el ancho */
-    max-width: 1000px; /* Limita el ancho del texto */
-    margin: 0 auto; /* Centra el contenido */
-    text-align: center; /* Texto centrado */
-    font-size: 25px; /* Tamaño más consistente para móviles y escritorio */
-    color: #647381;
-    font-family: monospace;
-    overflow-wrap: break-word;
-    line-height: 1.5; /* Espaciado cómodo entre líneas */
-    word-wrap: break-word; /* Permite que las palabras largas se dividan */
-    }
-
-    /* .home-content p:nth-of-type(2){
-  margin-bottom: 30px;
-} */
-
-    p {
-    margin-bottom: 15px; /* Espaciado más compacto para párrafos */
-}
-    .icon-img {
-      margin-left: 180px;
-    }
-
-    .ho-img {
-      width: 600px;
-      height: 400px;
-      border-radius: 4%;
-      box-shadow: 0 0 3px #0ef;
-    }
-
-
-
-    .btns {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: monospace;
-      margin: 10px 0; /* Reduce el espacio entre botones y otros elementos */
-
-    }
-
-    .btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 12px 28px;
-      /* background: #0c141e; */
-      background-color: rgba(0, 0, 0, 0.5); /* Color negro con un 50% de transparencia */
-      border-radius: 40px;
-      font-size: 20px;
-      color: #295a87;
-      letter-spacing: 1px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 30px 0;
-      text-align: center;
-      cursor: pointer;
-      font-family: monospace;
-    }
-
-    .btn:hover{
-      box-shadow: 0 0 8px rgb(0, 238, 255, 0.2);
-    }
-
-    /*KEYFRAMES ANIMATION*/
-    @keyframes SlideRight {
-      0% {
-        transform: traslateX(100px);
-        opacity: 0;
-      }
-
-      100% {
-        transform: traslateX(0);
-        opacity: 1;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-    h3 {
-        font-size: 20px; /* Tamaño reducido para pantallas pequeñas */
-      
-    }
-
-    p {
-        font-size: 12px; /* Reduce el tamaño del párrafo */
-        line-height: 1.4; /* Ajusta el espaciado entre líneas */
-    }
-
-    .btn {
-        font-size: 14px; /* Tamaño del texto del botón */
-        padding: 10px 20px; /* Botón más compacto */
-    }
-}
   </style>
 </head>
 
@@ -318,52 +195,7 @@
   </div>
     </nav>
   </header>
-
-  <section class="home">
-    <div class="home-content">
-      <h3 id="title">JavisKids</h3>
-      <p id="description">>JavisKids is a Web Platform designed to teach programming and Development of multimedia projects to children and young
-        people with a real text editor.
-        <br><br>"Code from Childhood, Future from Reality"
-      </p>
-      <div class="btns">
-        <a href="#" class="btn">Login</a>
-      </div>
-    </div>
-
-    <!-- <div class="icon-img">
-       <img class="ho-img" src="C:\Users\Yulia\OneDrive\Javiskids\sd.png"/>
-  </div> -->
-
-  </section>
-<script>
-     // Funcionalidad JavaScript
-
-      const translations = {
-    en: {
-        title: "JavisKids",
-        description: `>JavisKids Is a Web Platform designed to teach Programming and Development of multimedia projects to children and young people with a real text editor.\n\n"Code from Childhood, Future from Reality"`
-    },
-    es: {
-        title: "JavisKids",
-        description: `>JavisKids Es una Plataforma Web diseñada para enseñar programación y Desarrollo de proyectos multimedia a niños y jóvenes con un editor de texto real.\n\n"Codigo desde la Infancia, Futuro desde la Realidad"`
-    },
-    fr: {
-        title: "JavisKids",
-        description:  `>JavisKids C'est une Plateforme Web conçue pour enseigner la Programmation et le Développement de projets multimédias aux enfants et aux jeunes avec un éditeur de texte réel.\n\n"Coder dès l'Enfance, Avenir depuis la Réalité"`
-    },
-    de: {
-        title: "JavisKids",
-        description: `>JavisKids ist eine WebPlattform, die entwickelt wurde, um Kindern und Jugendlichen Programmierung und die Entwicklung multimedialer Projekte beizubringen.\n\n"Programmieren von Kindheit an, Zukunft aus der Realität"`
-    }
-};
-
-function changeLanguage(lang) {
-   document.getElementById('title').innerText = translations[lang].title;
-   document.getElementById('description').innerText = translations[lang].description;
-}
-</script>
-
+  <h1>¡Soon!</h1>
 </body>
 
 </html>
