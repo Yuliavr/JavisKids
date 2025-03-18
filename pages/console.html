@@ -199,7 +199,28 @@
   </div>
     </nav>
   </header>
-  <h1>¡Soon!</h1>
+  <h1 id="title">¡Soon!</h1>
+
+  <script>
+     // Funcionalidad JavaScript
+
+      const translations = {
+    en: {
+        title: "¡Pront!",
+        
+    es: {
+        title: "¡Soon!",
+        
+    fr: {
+        title: "¡Bientôt!",
+       
+    de: {
+        title: "¡Bald!",
+        
+function changeLanguage(lang) {
+   document.getElementById('title').innerText = translations[lang].title;
+}
+</script>
 </body>
 
 </html>
