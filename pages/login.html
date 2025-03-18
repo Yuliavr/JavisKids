@@ -82,7 +82,7 @@ a {
 
             <button id="btto type="submit">Login</button>
         </form>
-        <p id="descripcion">Don't have an account? <a href="#">Register</a></p>
+        <p id="descripcion">¿Don't have an account? <a id="regis" href="#">Register</a></p>
     </div>
     <script>
       // Archivo: script.js
@@ -108,23 +108,53 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   const translations = {
     en: {
       title: "Login",
+      labes_email: "Email",
+      labes_pass: "Password",
+      btto: "Login",
+      descripcion: "¿Don't have an account?",
+      regis:"Register",
     },
     es: {
-      title: "Pronto",
+      title: "Iniciar Sesion",
+      labes_email: "Email",
+      labes_pass: "Contraseña",
+      btto: "Iniciar",
+      descripcion: "¿No tienes una cuenta?",
+      regis: "Registrate",
     },
     fr: {
-      title: "Bientôt!",
+      title: "Se connecter",
+      labes_email: "Email",
+      labes_pass: "Mot de passe",
+      btto: "connecter",
+      descripcion: "¿Vous n'avez pas de compte ?",
+      regis:"Inscrivez-vous",
     },
     de: {
-      title: "Bald!",
+      title: "Anmelden",
+      labes_email: "Email",
+      labes_pass: "Passwort",
+      btto: "Starten",
+      descripcion: "¿Haben Sie kein Konto?",
+      regis:"Registrieren",
     },
     ru: {
-    title: "Скоро!", 
+      title: "Войти",
+      labes_email: "электронная почта",
+      labes_pass: "Пароль",
+      btto: "Начать",
+      descripcion: "¿У вас нет аккаунта?",
+      regis:"Зарегистрироваться",
     }
   };
 
   function changeLanguage(lang) {
     document.getElementById('title').innerText = translations[lang].title;
+    document.getElementById('labes_email').innerText = translations[lang].labes_email;
+    document.getElementById('labes_pass').innerText = translations[lang].labes_pass;
+    document.getElementById('btto').innerText = translations[lang].btto;
+    document.getElementById('decripcion').innerText = translations[lang].decripcion;
+    document.getElementById('regis').innerText = translations[lang].regis;
   }
 </body>
 </html>
