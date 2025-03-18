@@ -248,21 +248,21 @@ form {
   </div>
     </nav>
   </header>
-    <h1>Contact</h1>
+    <h1 id="title">Contact</h1>
     <form id="contactForm">
-        <label for="name">Name:</label>
+        <label id="labes_name" for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="last">Last:</label>
+        <label id="labes_last" for="last">Last:</label>
         <input type="text" id="last" name="last" required>
 
-        <label for="email">Email:</label>
+        <label id="labes_email" for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="message">Message:</label>
+        <label id="labes_msg" for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button type="button" onclick="enviarFormulario()">Send</button>
+        <button id="btto" type="button" onclick="enviarFormulario()">Send</button>
     </form>
 
     <script>
@@ -281,5 +281,43 @@ form {
             }
         }
     </script>
+
+    <script>
+  // Funcionalidad JavaScript
+
+  const translations = {
+    en: {
+      title: "¡Contac!",
+      labes_name: "¡Name!",
+      labes_last: "¡Last!",
+      labes_email: "¡Email!",
+      labes_msg: "¡Message!",
+      btto: "¡Send!",
+    },
+    es: {
+      title: "¡Contacto!",
+      labes_name: "¡Nombre!",
+      labes_last: "¡Apellido!",
+      labes_email: "¡Correo!",
+      labes_msg: "¡Mensaje!",
+      btto: "¡Enviar!",
+    },
+    fr: {
+      title: "Bientôt!",
+    },
+    de: {
+      title: "Bald!",
+    },
+    ru: {
+    title: "Скоро!", 
+    }
+  };
+
+  function changeLanguage(lang) {
+    document.getElementById('title').innerText = translations[lang].title;
+    document.getElementById('labes').innerText = translations[lang].labes;
+    document.getElementById('btto').innerText = translations[lang].btto;
+  }
+</script>
 </body>
 </html>
