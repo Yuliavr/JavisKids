@@ -47,7 +47,8 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -30px;
+    /* bottom: -30px; */
+    bottom: 0; /* Alineado perfectamente en la parte inferior */
     width: 100%;
     height: 120px;
     /* background: #000; */
