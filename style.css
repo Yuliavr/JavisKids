@@ -25,16 +25,18 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 100%;
   }
 
   .logojk {
-    position: absolute;
-    top: 0;
+    position: relative;
     display: block;
     margin: auto;
     width: 500px;
-    height: 520px;
-    overflow: hidden;
+    height: 520px; 
     transform: scale(0.8);
 
   }
