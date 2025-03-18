@@ -28,7 +28,8 @@ body {
   }
 
   .logojk {
-    position: relative;
+    position: absolute;
+    top: 0;
     display: block;
     margin: auto;
     width: 500px;
